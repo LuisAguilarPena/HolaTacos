@@ -10,7 +10,7 @@
   height: 250px;
   text-align: center;
   font-weight: bold;*/
-  font-size: 1.2rem; /*scales based on the default font*/
+  /*font-size: 1.2rem; scales based on the default font*/
 }
 /*media queries to ensure taco looks good on as many devices as possible*/
 /*I can hardcode for specific devices, look for data of the most used and their screen size or use porcentages nad just make sure that ingredients still look good and are place in the right spot*/
