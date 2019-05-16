@@ -5,7 +5,7 @@ import Taco from '../../components/Taco/Taco';
 class TacoBuilder extends Component {
   state = {
     ingredients: {
-      tortilla: 0,
+      tortilla: 1,
       pastor: 0,
       suadero: 0,
       bistec: 0,
