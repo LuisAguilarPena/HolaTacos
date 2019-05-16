@@ -66,16 +66,6 @@
   position: absolute;
 }
 
-.pina{
-  width: 126px;
-  height: 80px;
-  background-image: url("pina.png");
-  background-repeat: no-repeat;
-  left: 38%;
-  top: 39%;
-  position: absolute;
-}
-
 .cilantro{
   width: 136px;
   height: 128px;
@@ -93,5 +83,15 @@
   background-repeat: no-repeat;
   left: 39%;
   top: 34%;
+  position: absolute;
+}
+
+.pina{
+  width: 126px;
+  height: 80px;
+  background-image: url("pina.png");
+  background-repeat: no-repeat;
+  left: 38%;
+  top: 39%;
   position: absolute;
 }
