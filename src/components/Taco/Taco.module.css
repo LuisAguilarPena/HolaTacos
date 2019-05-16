@@ -13,6 +13,7 @@
   font-size: 1.2rem; /*scales based on the default font*/
 }
 /*media queries to ensure taco looks good on as many devices as possible*/
+/*I can hardcode for specific devices, look for data of the most used and their screen size*/
 /*@media (min-width: 500px) and (min-height: 400px) {
   .Taco {
     width: 350px;
