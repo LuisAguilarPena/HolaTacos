@@ -1,0 +1,35 @@
+.Taco {
+  width: 500px;
+  margin: auto;
+  height: 450px;
+  background-color: antiquewhite;
+  position: relative;
+  /*
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  text-align: center;
+  font-weight: bold;*/
+  font-size: 1.2rem; /*scales based on the default font*/
+}
+/*media queries to ensure taco looks good on as many devices as possible*/
+/*@media (min-width: 500px) and (min-height: 400px) {
+  .Taco {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+  .Taco {
+    width: 450px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+  .Taco {
+    width: 700px;
+    height: 600px;
+  }
+}*/
