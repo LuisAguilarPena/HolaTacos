@@ -1,0 +1,97 @@
+.box {
+  width: 500px;
+  margin: auto;
+  height: 450px;
+  background-color: white;
+  position: relative;
+}
+
+.tortilla{
+  width: 204px;
+  height: 204px;
+  background-image: url("tortilla.png");
+  background-repeat: no-repeat;
+  left: 30%;
+  top: 25%;
+  position: absolute;
+}
+
+.pastor{
+  width: 196px;
+  height: 124px;
+  background-image: url("pastor.png");
+  background-repeat: no-repeat;
+  left: 31%;
+  top: 34%;
+  position: absolute;
+}
+
+.suadero{
+  width: 200px;
+  height: 126px;
+  background-image: url("suadero.png");
+  background-repeat: no-repeat;
+  left: 31%;
+  top: 34%;
+  position: absolute;
+}
+
+.bistec{
+  width: 228px;
+  height: 122px;
+  background-image: url("bistec.png");
+  background-repeat: no-repeat;
+  left: 27%;
+  top: 35%;
+  position: absolute;
+}
+
+.longaniza{
+  width: 160px;
+  height: 168px;
+  background-image: url("longaniza.png");
+  background-repeat: no-repeat;
+  left: 34%;
+  top: 28%;
+  position: absolute;
+}
+
+.pollo{
+  width: 213px;
+  height: 212px;
+  background-image: url("pollo.png");
+  background-repeat: no-repeat;
+  left: 32%;
+  top: 28%;
+  position: absolute;
+}
+
+.pina{
+  width: 126px;
+  height: 80px;
+  background-image: url("pina.png");
+  background-repeat: no-repeat;
+  left: 38%;
+  top: 39%;
+  position: absolute;
+}
+
+.cilantro{
+  width: 136px;
+  height: 128px;
+  background-image: url("cilantro.png");
+  background-repeat: no-repeat;
+  left: 36%;
+  top: 34%;
+  position: absolute;
+}
+
+.onion{
+  width: 112px;
+  height: 112px;
+  background-image: url("onion.png");
+  background-repeat: no-repeat;
+  left: 39%;
+  top: 34%;
+  position: absolute;
+}
