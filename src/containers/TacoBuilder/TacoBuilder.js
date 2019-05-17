@@ -20,15 +20,15 @@ class TacoBuilder extends Component {
   }
 
   addIngredientHandler = type => {
-    const meats = [
-      this.state.ingredients.pastor,
-      this.state.ingredients.suadero,
-      this.state.ingredients.bistec,
-      this.state.ingredients.longaniza,
-      this.state.ingredients.pollo
-    ]
     let ingredientQuantity = this.state.ingredients[type]
     // limit to one meat
+        const meats = [
+          this.state.ingredients.pastor,
+          this.state.ingredients.suadero,
+          this.state.ingredients.bistec,
+          this.state.ingredients.longaniza,
+          this.state.ingredients.pollo
+        ]
     if(ingredientQuantity === 0 && (meats.reduce((previousValueAcc, currentValue)=> previousValueAcc+currentValue)<1)) {
       console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
