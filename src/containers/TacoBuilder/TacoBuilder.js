@@ -21,7 +21,10 @@ class TacoBuilder extends Component {
 
   addIngredientHandler = type => {
     const oldCount = this.state.ingredients[type]
-    const updatedCount = oldCount +1;
+    let updatedCount;
+    if(oldCount===0) {
+      updatedCount = oldCount +1;
+    }
     // state should be updated in an inmutable way
     const updatedIngredients = {
       ...this.state.ingredients
