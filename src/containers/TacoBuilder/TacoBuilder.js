@@ -6,7 +6,7 @@ import BuildControls from '../../components/Taco/BuildControls/BuildControls';
 class TacoBuilder extends Component {
   state = {
     ingredients: {
-      tortilla: 1,
+      tortilla: 0,
       pastor: 0,
       suadero: 0,
       bistec: 0,
@@ -20,8 +20,26 @@ class TacoBuilder extends Component {
   }
 
   addIngredientHandler = type => {
+    const meats = [
+      this.state.ingredients.pastor,
+      this.state.ingredients.suadero,
+      this.state.ingredients.bistec,
+      this.state.ingredients.longaniza,
+      this.state.ingredients.pollo
+    ]
     let ingredientQuantity = this.state.ingredients[type]
-    if(ingredientQuantity === 0) {
+    // limit to one meat
+    if(ingredientQuantity === 0 && (meats.reduce((previousValueAcc, currentValue)=> previousValueAcc+currentValue)<1)) {
+      console.log(`addIngredientHandler added 1 to ${type}`);
+      // state should be updated in an inmutable way
+      const updatedIngredients = {
+        ...this.state.ingredients
+      };
+      updatedIngredients[type]=ingredientQuantity+1;
+      this.setState({ingredients: updatedIngredients})
+    }
+    // let other ingredients be added
+    if(ingredientQuantity === 0 && (type==='cilantro' || type==='onion' || type==='pina')) {
       console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
@@ -31,6 +49,8 @@ class TacoBuilder extends Component {
       this.setState({ingredients: updatedIngredients})
     }
     console.log(this.state.ingredients);
+    console.log(meats);
+    
     
   }
 
