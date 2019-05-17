@@ -52,15 +52,27 @@ class TacoBuilder extends Component {
     console.log(meats);
   }
 
-  removeIngredient = type => {
-
+  removeIngredientHandler = type => {
+    let ingredientQuantity = this.state.ingredients[type]
+    if(ingredientQuantity === 1) {
+      console.log(`removeIngredientHandler removed 1 to ${type}`);
+      // state should be updated in an inmutable way
+      const updatedIngredients = {
+        ...this.state.ingredients
+      };
+      updatedIngredients[type]=ingredientQuantity-1;
+      this.setState({ingredients: updatedIngredients})
+    }
+    console.log(this.state.ingredients);
   }
 
   render () {
     return (
       <Aux>
         <Taco ingredients={this.state.ingredients}/>
-        <BuildControls ingredientAdded={this.addIngredientHandler} />
+        <BuildControls 
+          ingredientAdded={this.addIngredientHandler}
+          ingredientRemoved={this.removeIngredientHandler}/>
       </Aux>
     );
   }
