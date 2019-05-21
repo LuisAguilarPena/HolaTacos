@@ -24,14 +24,17 @@ class TacoIngredient extends Component{
       case('pollo'):
         ingredient = <div className={classes.pollo}></div>;
         break;
-      case('pina'):
-        ingredient = <div className={classes.pina}></div>;
-        break;
       case('cilantro'):
         ingredient = <div className={classes.cilantro}></div>;
         break;
       case('cebolla'):
         ingredient = <div className={classes.cebolla}></div>;
+        break;
+      case('queso'):
+        ingredient = <div className={classes.queso}></div>;
+        break;
+      case('pina'):
+        ingredient = <div className={classes.pina}></div>;
         break;
       default:
         ingredient = null;  

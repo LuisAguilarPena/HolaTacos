@@ -95,3 +95,13 @@
   top: 39%;
   position: absolute;
 }
+
+.queso{
+  width: 180px;
+  height: 70px;
+  background-image: url("queso.png");
+  background-repeat: no-repeat;
+  left: 33%;
+  top: 40%;
+  position: absolute;
+}

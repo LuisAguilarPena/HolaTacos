@@ -14,6 +14,7 @@ class TacoBuilder extends Component {
       pollo: 0,
       cilantro: 0,
       cebolla: 0,
+      queso: 0,
       pina: 0
     },
     totalPrice: 20
@@ -39,7 +40,7 @@ class TacoBuilder extends Component {
       this.setState({ingredients: updatedIngredients})
     }
     // let other ingredients be added
-    if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='cebolla' || type==='pina')) {
+    if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='cebolla' || type==='queso' || type==='pina')) {
       console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
@@ -91,32 +92,32 @@ class TacoBuilder extends Component {
     }
 
     if (disabledMore.suadero === 1) {
-      disabledMore.suadero = true;
       disabledMore.pastor = true;
+      disabledMore.suadero = true;
       disabledMore.bistec = true;
       disabledMore.longaniza = true;
       disabledMore.pollo = true;
     }
 
     if (disabledMore.bistec === 1) {
-      disabledMore.suadero = true;
       disabledMore.pastor = true;
+      disabledMore.suadero = true;
       disabledMore.bistec = true;
       disabledMore.longaniza = true;
       disabledMore.pollo = true;
     }
 
     if (disabledMore.longaniza === 1) {
-      disabledMore.suadero = true;
       disabledMore.pastor = true;
+      disabledMore.suadero = true;
       disabledMore.bistec = true;
       disabledMore.longaniza = true;
       disabledMore.pollo = true;
     }
 
     if (disabledMore.pollo === 1) {
-      disabledMore.suadero = true;
       disabledMore.pastor = true;
+      disabledMore.suadero = true;
       disabledMore.bistec = true;
       disabledMore.longaniza = true;
       disabledMore.pollo = true;
