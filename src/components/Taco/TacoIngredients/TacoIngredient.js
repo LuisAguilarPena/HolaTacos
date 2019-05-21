@@ -30,8 +30,8 @@ class TacoIngredient extends Component{
       case('cilantro'):
         ingredient = <div className={classes.cilantro}></div>;
         break;
-      case('onion'):
-        ingredient = <div className={classes.onion}></div>;
+      case('cebolla'):
+        ingredient = <div className={classes.cebolla}></div>;
         break;
       default:
         ingredient = null;  

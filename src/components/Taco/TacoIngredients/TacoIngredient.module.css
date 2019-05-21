@@ -76,10 +76,10 @@
   position: absolute;
 }
 
-.onion{
+.cebolla{
   width: 112px;
   height: 112px;
-  background-image: url("onion.png");
+  background-image: url("cebolla.png");
   background-repeat: no-repeat;
   left: 39%;
   top: 34%;

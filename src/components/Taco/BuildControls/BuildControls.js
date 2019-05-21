@@ -10,7 +10,7 @@ const controls = [
   {label: 'Longaniza', type: 'longaniza'},
   {label: 'Pollo', type: 'pollo'},
   {label: 'Cilantro', type: 'cilantro'},
-  {label: 'Onion', type: 'onion'},
+  {label: 'Cebolla', type: 'cebolla'},
   {label: 'Pina', type: 'pina'}
 ]
 const buildControls = props => (
@@ -19,7 +19,8 @@ const buildControls = props => (
       key={ctrl.label} 
       label={ctrl.label}
       added={() => props.ingredientAdded(ctrl.type)} 
-      removed={() => props.ingredientRemoved(ctrl.type)} />
+      removed={() => props.ingredientRemoved(ctrl.type)} 
+      disabled={props.disabled[ctrl.type]} />
     )}
   </div>
 );

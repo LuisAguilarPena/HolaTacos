@@ -13,7 +13,7 @@ class TacoBuilder extends Component {
       longaniza: 0,
       pollo: 0,
       cilantro: 0,
-      onion: 0,
+      cebolla: 0,
       pina: 0
     },
     totalPrice: 20
@@ -39,7 +39,7 @@ class TacoBuilder extends Component {
       this.setState({ingredients: updatedIngredients})
     }
     // let other ingredients be added
-    if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='onion' || type==='pina')) {
+    if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='cebolla' || type==='pina')) {
       console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
@@ -67,12 +67,19 @@ class TacoBuilder extends Component {
   }
 
   render () {
+    const disabledInfo = {
+      ...this.state.ingredients
+    };
+    for(let key in disabledInfo) {
+      disabledInfo[key] = disabledInfo[key] <=0; // will update values so instead of numbers we will have true or false
+    } // {tortilla: true, pastor: true...} if ture should be disable
     return (
       <Aux>
         <Taco ingredients={this.state.ingredients}/>
         <BuildControls 
           ingredientAdded={this.addIngredientHandler}
-          ingredientRemoved={this.removeIngredientHandler}/>
+          ingredientRemoved={this.removeIngredientHandler}
+          disabled={disabledInfo} />
       </Aux>
     );
   }
