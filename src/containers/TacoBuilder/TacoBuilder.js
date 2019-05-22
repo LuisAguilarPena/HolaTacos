@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Aux from '../../hoc/Aux';
 import Taco from '../../components/Taco/Taco';
 import BuildControls from '../../components/Taco/BuildControls/BuildControls';
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/Taco/OrderSummary/OrderSummary';
 
 class TacoBuilder extends Component {
   state = {
@@ -139,6 +141,9 @@ class TacoBuilder extends Component {
 
     return (
       <Aux>
+        <Modal>
+          <OrderSummary />
+        </Modal>
         <Taco ingredients={this.state.ingredients}/>
         <BuildControls 
           ingredientAdded={this.addIngredientHandler}
