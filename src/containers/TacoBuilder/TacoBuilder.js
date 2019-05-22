@@ -17,7 +17,8 @@ class TacoBuilder extends Component {
       queso: 0,
       pina: 0
     },
-    totalPrice: 20
+    totalPrice: 20,
+    quantity: 0
   }
 
   addIngredientHandler = type => {
@@ -130,7 +131,9 @@ class TacoBuilder extends Component {
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
           disabled={disabledInfo} 
-          disabledMore={disabledMore} />
+          disabledMore={disabledMore}
+          quantity={this.state.quantity} 
+          price={this.state.totalPrice} />
       </Aux>
     );
   }
