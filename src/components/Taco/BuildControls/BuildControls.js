@@ -27,7 +27,7 @@ const buildControls = props => (
     )}
     <div className={classes.BuildControl}>
       <div className={classes.Label}>{props.quantity}</div>
-      <button className={classes.Less} onClick={props.quantityMinus}>-</button>
+      <button className={classes.Less} onClick={props.quantityMinus} disabled={props.disabledTQ}>-</button>
       <button className={classes.More} onClick={props.quantityPlus}>+</button>
     </div>
     <button>Agregar orden</button>

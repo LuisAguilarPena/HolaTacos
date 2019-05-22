@@ -80,6 +80,8 @@ class TacoBuilder extends Component {
   }
 
   render () {
+    const disabledTQ= this.state.quantity<=0 ? true : false; 
+
     const disabledInfo = {
       ...this.state.ingredients
     };
@@ -145,7 +147,8 @@ class TacoBuilder extends Component {
           disabledMore={disabledMore}
           quantity={this.state.quantity}
           quantityPlus={this.increaseTacoQuantityHandler}
-          quantityMinus={this.decreaseTacoQuantityHandler} 
+          quantityMinus={this.decreaseTacoQuantityHandler}
+          disabledTQ={disabledTQ} 
           price={this.state.totalPrice} />
       </Aux>
     );
