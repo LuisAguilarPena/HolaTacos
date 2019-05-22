@@ -30,7 +30,7 @@ const buildControls = props => (
       <button className={classes.Less} onClick={props.quantityMinus} disabled={props.disabledTQ}>-</button>
       <button className={classes.More} onClick={props.quantityPlus}>+</button>
     </div>
-    <button>Agregar orden</button>
+    <button className={classes.OrderButton} disabled={props.addToOrder}>Agregar orden</button>
   </div>
 );
 
