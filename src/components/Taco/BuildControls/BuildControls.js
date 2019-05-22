@@ -16,7 +16,7 @@ const controls = [
 ]
 const buildControls = props => (
   <div className={classes.BuildControls}>
-    <p><strong>{props.quantity}</strong> Tacos a <strong>${props.price}</strong> pesitos = <strong>${props.quantity*props.price}</strong></p>
+    <p><strong>{props.quantity}</strong> Tacos a <strong>${props.price}</strong> pesitos cada uno = <strong>${props.quantity*props.price}</strong></p>
     {controls.map(ctrl => <BuildControl 
       key={ctrl.label} 
       label={ctrl.label}
@@ -27,8 +27,8 @@ const buildControls = props => (
     )}
     <div className={classes.BuildControl}>
       <div className={classes.Label}>{props.quantity}</div>
-      <button className={classes.Less}>-</button>
-      <button className={classes.More}>+</button>
+      <button className={classes.Less} onClick={props.quantityMinus}>-</button>
+      <button className={classes.More} onClick={props.quantityPlus}>+</button>
     </div>
     <button>Agregar orden</button>
   </div>

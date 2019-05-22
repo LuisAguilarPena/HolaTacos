@@ -68,6 +68,17 @@ class TacoBuilder extends Component {
     console.log(this.state.ingredients);
   }
 
+  increaseTacoQuantityHandler = () =>{
+    let updatedQuantity = this.state.quantity;
+    updatedQuantity++
+    this.setState({quantity: updatedQuantity})
+  }
+  decreaseTacoQuantityHandler = () =>{
+    let updatedQuantity = this.state.quantity;
+    updatedQuantity--
+    this.setState({quantity: updatedQuantity})
+  }
+
   render () {
     const disabledInfo = {
       ...this.state.ingredients
@@ -132,7 +143,9 @@ class TacoBuilder extends Component {
           ingredientRemoved={this.removeIngredientHandler}
           disabled={disabledInfo} 
           disabledMore={disabledMore}
-          quantity={this.state.quantity} 
+          quantity={this.state.quantity}
+          quantityPlus={this.increaseTacoQuantityHandler}
+          quantityMinus={this.decreaseTacoQuantityHandler} 
           price={this.state.totalPrice} />
       </Aux>
     );
