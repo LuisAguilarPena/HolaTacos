@@ -8,7 +8,7 @@ import OrderSummary from '../../components/Taco/OrderSummary/OrderSummary';
 class TacoBuilder extends Component {
   state = {
     ingredients: {
-      tortilla: 1,
+      tortilla: 0,
       pastor: 0,
       suadero: 0,
       bistec: 0,
@@ -21,6 +21,7 @@ class TacoBuilder extends Component {
     },
     totalPrice: 20,
     quantity: 0,
+    modalDisplay: false
   }
 
   addIngredientHandler = type => {
@@ -79,6 +80,10 @@ class TacoBuilder extends Component {
     let updatedQuantity = this.state.quantity;
     updatedQuantity--
     this.setState({quantity: updatedQuantity})
+  }
+
+  modalDisplayHandler = () => {
+    this.setState({modalDisplay: true})
   }
 
   render () {
@@ -141,8 +146,8 @@ class TacoBuilder extends Component {
 
     return (
       <Aux>
-        <Modal>
-          <OrderSummary ingredients={this.state.ingredients}/>
+        <Modal show={this.state.modalDisplay}>
+          <OrderSummary ingredients={this.state.ingredients} quantity={this.state.quantity} />
         </Modal>
         <Taco ingredients={this.state.ingredients}/>
         <BuildControls 
@@ -155,7 +160,8 @@ class TacoBuilder extends Component {
           quantityMinus={this.decreaseTacoQuantityHandler}
           disabledTQ={disabledTQ}
           addToOrder={this.state.quantity<=0} 
-          price={this.state.totalPrice} />
+          price={this.state.totalPrice} 
+          ordered={this.modalDisplayHandler}/>
       </Aux>
     );
   }

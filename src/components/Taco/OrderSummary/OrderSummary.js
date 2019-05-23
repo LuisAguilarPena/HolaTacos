@@ -16,7 +16,7 @@ const  orderSummary = props => {
   return (
     <Aux>
       <h3>Resumen de orden:</h3>
-      <p><strong>10</strong> tacos con los siguientes ingredientes:</p>
+      <p><strong>{props.quantity}</strong> tacos con los siguientes ingredientes:</p>
       <ul>
         {ingredientSummary}
       </ul> 
