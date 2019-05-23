@@ -8,7 +8,7 @@ import OrderSummary from '../../components/Taco/OrderSummary/OrderSummary';
 class TacoBuilder extends Component {
   state = {
     ingredients: {
-      tortilla: 0,
+      tortilla: 1,
       pastor: 0,
       suadero: 0,
       bistec: 0,
@@ -142,7 +142,7 @@ class TacoBuilder extends Component {
     return (
       <Aux>
         <Modal>
-          <OrderSummary />
+          <OrderSummary ingredients={this.state.ingredients}/>
         </Modal>
         <Taco ingredients={this.state.ingredients}/>
         <BuildControls 
