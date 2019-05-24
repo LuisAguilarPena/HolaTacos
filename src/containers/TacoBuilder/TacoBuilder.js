@@ -86,6 +86,13 @@ class TacoBuilder extends Component {
     this.setState({modalDisplay: true})
   }
 
+  modalDisplayHandlerCancel = () => {
+    this.setState({modalDisplay: false})
+  }
+
+  modalContinueHandler = () => {
+    alert('');
+  }
   render () {
     const disabledTQ= this.state.quantity<=0 ? true : false; 
 
@@ -145,9 +152,14 @@ class TacoBuilder extends Component {
     }
 
     return (
-      <Aux>
-        <Modal show={this.state.modalDisplay}>
-          <OrderSummary ingredients={this.state.ingredients} quantity={this.state.quantity} />
+      <Aux>  
+        <Modal show={this.state.modalDisplay} modalClosed={this.modalDisplayHandlerCancel} >
+          <OrderSummary 
+            ingredients={this.state.ingredients} 
+            quantity={this.state.quantity} 
+            price={this.state.totalPrice} 
+            modalContinue={this.modalContinueHandler} 
+            modalCancel={this.modalDisplayHandlerCancel} />
         </Modal>
         <Taco ingredients={this.state.ingredients}/>
         <BuildControls 
