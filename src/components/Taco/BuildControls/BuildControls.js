@@ -16,7 +16,7 @@ const controls = [
 ]
 const buildControls = props => (
   <div className={classes.BuildControls}>
-    <p><strong>{props.quantity}</strong> Tacos a <strong>${props.price}</strong> pesitos cada uno = <strong>${props.quantity*props.price}</strong></p>
+    <p><strong>{props.quantity}</strong> Tacos a <strong>${props.price}</strong> = <strong>${props.quantity*props.price}</strong></p>
     {controls.map(ctrl => <BuildControl 
       key={ctrl.label} 
       label={ctrl.label}
