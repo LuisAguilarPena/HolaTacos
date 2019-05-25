@@ -17,18 +17,19 @@
 }
 
 .BuildControl button:disabled {
-  background-color: #1c88cf;
+  background-color: #ccc;
   border: hidden;
-  color: rgb(180, 180, 180);
+  color: #888888;
   cursor: default;
+  box-shadow: inset 6px -6px #888888;
 }
 
 .BuildControl button:hover:disabled {
-  color: rgb(180, 180, 180);
+  color: #888888;
   cursor: not-allowed;
-  box-shadow: inset 6px -6px #0062a3;
+  box-shadow: inset 6px -6px #888888;
   transform: scale(1);
-  background-color: #1c88cf;
+  background-color: #ccc;
 }
 
 .Label {
@@ -54,12 +55,12 @@
   background-color: #2699e6;
   color: white;
   box-shadow: inset 3px -3px #0062a3;
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
 
 .BuildControl .More:hover,.BuildControl .More:active {
   background-color: #2699e6;
   color: white;
   box-shadow: inset 3px -3px #0062a3;
-  transform: scale(0.97);
+  transform: scale(0.95);
 }

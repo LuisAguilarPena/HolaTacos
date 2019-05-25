@@ -17,6 +17,7 @@
   font-size: 20px
 }
 
+
 .BuildControl {
   display: flex;
   justify-content: space-between;
@@ -36,17 +37,19 @@
 }
 
 .BuildControl button:disabled {
-  background-color: #1c88cf;
+  background-color: #ccc;
   border: hidden;
-  color: #ccc;
+  color: #888888;
   cursor: default;
+  box-shadow: inset 6px -6px #888888;
 }
 
 .BuildControl button:hover:disabled {
-  color: #ccc;
+  color: #888888;
   cursor: not-allowed;
-  box-shadow: inset 6px -6px #0062a3;
+  box-shadow: inset 6px -6px #888888;
   transform: scale(1);
+  background-color: #ccc;
 }
 
 .Label {
@@ -72,26 +75,28 @@
   background-color: #2699e6;
   color: white;
   box-shadow: inset 3px -3px #0062a3;
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
 
 .BuildControl .More:hover,.BuildControl .More:active {
   background-color: #2699e6;
   color: white;
   box-shadow: inset 3px -3px #0062a3;
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
+
 
 .OrderButton {
   background-color: #DAD735;
   outline: none;
   cursor: pointer;
   border: 1px solid #966909;
-  color: #966909;
+  color: white;
   font-family: inherit;
   font-size: 1.2em;
   padding: 15px 30px;
   box-shadow: 2px 2px 2px #966909;
+  margin: 16px 0 10px 0;
 }
 
 .OrderButton:hover, .OrderButton:active {
