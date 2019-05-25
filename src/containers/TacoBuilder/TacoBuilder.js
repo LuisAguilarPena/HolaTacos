@@ -91,7 +91,7 @@ class TacoBuilder extends Component {
   }
 
   modalContinueHandler = () => {
-    alert('');
+    alert(`“All the things I really like to do are either immoral, illegal or fattening.” -Everybody`);
   }
   render () {
     const disabledTQ= this.state.quantity<=0 ? true : false; 
