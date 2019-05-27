@@ -11,8 +11,8 @@
   height: 204px;
   background-image: url("tortilla.png");
   background-repeat: no-repeat;
-  left: 30%;
-  top: 25%;
+  left: 44%;
+  top: 10%;
   position: absolute;
 }
 
@@ -21,8 +21,8 @@
   height: 124px;
   background-image: url("pastor.png");
   background-repeat: no-repeat;
-  left: 31%;
-  top: 34%;
+  left: 44%;
+  top: 27%;
   position: absolute;
 }
 
@@ -31,8 +31,8 @@
   height: 126px;
   background-image: url("suadero.png");
   background-repeat: no-repeat;
-  left: 31%;
-  top: 34%;
+  left: 44%;
+  top: 28%;
   position: absolute;
 }
 
@@ -41,8 +41,8 @@
   height: 122px;
   background-image: url("bistec.png");
   background-repeat: no-repeat;
-  left: 27%;
-  top: 35%;
+  left: 43%;
+  top: 28%;
   position: absolute;
 }
 
@@ -51,8 +51,8 @@
   height: 168px;
   background-image: url("longaniza.png");
   background-repeat: no-repeat;
-  left: 34%;
-  top: 28%;
+  left: 45.5%;
+  top: 17%;
   position: absolute;
 }
 
@@ -61,8 +61,8 @@
   height: 212px;
   background-image: url("pollo.png");
   background-repeat: no-repeat;
-  left: 32%;
-  top: 28%;
+  left: 44.5%;
+  top: 17%;
   position: absolute;
 }
 
@@ -71,8 +71,8 @@
   height: 128px;
   background-image: url("cilantro.png");
   background-repeat: no-repeat;
-  left: 36%;
-  top: 34%;
+  left: 46%;
+  top: 28%;
   position: absolute;
 }
 
@@ -81,8 +81,8 @@
   height: 112px;
   background-image: url("cebolla.png");
   background-repeat: no-repeat;
-  left: 39%;
-  top: 34%;
+  left: 46.5%;
+  top: 30%;
   position: absolute;
 }
 
@@ -91,7 +91,7 @@
   height: 80px;
   background-image: url("pina.png");
   background-repeat: no-repeat;
-  left: 38%;
+  left: 46%;
   top: 39%;
   position: absolute;
 }
@@ -101,7 +101,7 @@
   height: 70px;
   background-image: url("queso.png");
   background-repeat: no-repeat;
-  left: 33%;
+  left: 44.5%;
   top: 40%;
   position: absolute;
 }

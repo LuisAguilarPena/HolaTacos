@@ -1,12 +1,13 @@
 .Taco {
-  width: 500px;
+  width: 100%;
   margin: auto;
-  height: 350px;
+  height: 220px;
   background-color: white;
   position: relative;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+  margin-top: 48px;
   /*
   width: 100%;
   margin: auto;
