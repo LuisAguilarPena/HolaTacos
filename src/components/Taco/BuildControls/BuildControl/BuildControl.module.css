@@ -40,9 +40,9 @@
 }
 
 .BuildControl .Less {  
-  background-color: #35a5f0;
+  background-color: #f05c5c;
   color: white;
-  box-shadow: inset 6px -6px  #0062a3;
+  box-shadow: inset 6px -6px  #a33d3d;
 }
 
 .BuildControl .More {
@@ -52,14 +52,14 @@
 }
 
 .BuildControl .Less:hover, .BuildControl .Less:active {  
-  background-color: #2699e6;
+  background-color: #e94848;
   color: white;
-  box-shadow: inset 3px -3px #0062a3;
+  box-shadow: inset 3px -3px #a33d3d;
   transform: scale(0.95);
 }
 
 .BuildControl .More:hover,.BuildControl .More:active {
-  background-color: #2699e6;
+  background-color: #2392db;
   color: white;
   box-shadow: inset 3px -3px #0062a3;
   transform: scale(0.95);
