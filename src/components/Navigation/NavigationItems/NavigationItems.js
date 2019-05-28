@@ -4,7 +4,7 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem link="/" active>Taco builder</NavigationItem>
+    <NavigationItem link="/" active>Taco</NavigationItem>
     <NavigationItem link="/" >Usuario</NavigationItem>
     <NavigationItem link="/" >Carrito</NavigationItem>
     <NavigationItem link="/" >Ayuda</NavigationItem>
