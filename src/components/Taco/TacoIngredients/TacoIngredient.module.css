@@ -9,7 +9,7 @@
 .tortilla{
   width: 204px;
   height: 204px;
-  background-image: url("tortilla.png");
+  background-image: url("../../../assets/images/tortilla.png");
   background-repeat: no-repeat;
   left: 34%;
   top: 10%;
@@ -19,7 +19,7 @@
 .pastor{
   width: 196px;
   height: 124px;
-  background-image: url("pastor.png");
+  background-image: url("../../../assets/images/pastor.png");
   background-repeat: no-repeat;
   left: 34%;
   top: 27%;
@@ -29,7 +29,7 @@
 .suadero{
   width: 200px;
   height: 126px;
-  background-image: url("suadero.png");
+  background-image: url("../../../assets/images/suadero.png");
   background-repeat: no-repeat;
   left: 34%;
   top: 28%;
@@ -39,7 +39,7 @@
 .bistec{
   width: 228px;
   height: 122px;
-  background-image: url("bistec.png");
+  background-image: url("../../../assets/images/bistec.png");
   background-repeat: no-repeat;
   left: 32%;
   top: 28%;
@@ -49,7 +49,7 @@
 .longaniza{
   width: 160px;
   height: 168px;
-  background-image: url("longaniza.png");
+  background-image: url("../../../assets/images/longaniza.png");
   background-repeat: no-repeat;
   left: 38%;
   top: 17%;
@@ -59,7 +59,7 @@
 .pollo{
   width: 213px;
   height: 212px;
-  background-image: url("pollo.png");
+  background-image: url("../../../assets/images/pollo.png");
   background-repeat: no-repeat;
   left: 36%;
   top: 17%;
@@ -69,7 +69,7 @@
 .cilantro{
   width: 136px;
   height: 128px;
-  background-image: url("cilantro.png");
+  background-image: url("../../../assets/images/cilantro.png");
   background-repeat: no-repeat;
   left: 39%;
   top: 28%;
@@ -79,7 +79,7 @@
 .cebolla{
   width: 112px;
   height: 112px;
-  background-image: url("cebolla.png");
+  background-image: url("../../../assets/images/cebolla.png");
   background-repeat: no-repeat;
   left: 41%;
   top: 30%;
@@ -89,7 +89,7 @@
 .pina{
   width: 126px;
   height: 80px;
-  background-image: url("pina.png");
+  background-image: url("../../../assets/images/pina.png");
   background-repeat: no-repeat;
   left: 40%;
   top: 39%;
@@ -99,7 +99,7 @@
 .queso{
   width: 180px;
   height: 70px;
-  background-image: url("queso.png");
+  background-image: url("../../../assets/images/queso.png");
   background-repeat: no-repeat;
   left: 35%;
   top: 40%;
