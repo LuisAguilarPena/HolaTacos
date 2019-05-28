@@ -1,4 +1,16 @@
 .Taco {
+  width: 30%;
+  margin: auto;
+  height: 220px;
+  background-color: whitesmoke;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 48px;
+  left: 8%;
+  top: 25%;
+  /* to put it on top
   width: 100%;
   margin: auto;
   height: 220px;
@@ -8,6 +20,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   margin-top: 48px;
+  */
   /*
   width: 100%;
   margin: auto;
@@ -15,6 +28,20 @@
   text-align: center;
   font-weight: bold;*/
   /*font-size: 1.2rem; scales based on the default font*/
+}
+
+@media (max-width: 1100px) {
+  .Taco {
+    width: 100%;
+    margin: auto;
+    height: 220px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 48px;
+  }
 }
 /*media queries to ensure taco looks good on as many devices as possible*/
 /*I can hardcode for specific devices, look for data of the most used and their screen size or use porcentages nad just make sure that ingredients still look good and are place in the right spot*/
