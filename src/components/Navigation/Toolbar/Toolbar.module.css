@@ -13,3 +13,12 @@
   z-index: 90;
   border: 4px solid black;
 }
+
+/* this helps us adjust the size of nav items even if they are bigger than toolbar
+.Toolbar nav{
+  height: 100%;
+}*/
+
+.Logo{
+  height: 80%;
+}
