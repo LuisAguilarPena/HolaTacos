@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Taco.module.css';
 import TacoIngredient from './TacoIngredients/TacoIngredient';
 import Aux from '../../hoc/Aux';
-import LogoImage from '../../assets/images/tacoPlaceholder.gif';
+import LogoImage from '../../assets/images/tacoPlaceholder2.gif';
 
 const taco = props => {
   // [tortilla, pastor, suadero...]
@@ -11,7 +11,7 @@ const taco = props => {
       // an array with empty arrays or arrays with undefined for every ingredient
       return [...Array(props.ingredients[igKey])]
         // underscore is a blank but the index is required  
-        .map((_, i) => <TacoIngredient key={igKey+i} type={igKey}/>)
+        .map((_, i) => <TacoIngredient key={igKey+i} type={igKey} />)
     })
     // console.log(transformedIngredients);
     // array of arrays of obj elements, if an ingredient is 1 otherwise is an empty array, each e is an ingredient and it has multiple things inside
