@@ -71,7 +71,7 @@
   .Taco {
     width: 600px;
     height: 615px;
-    background-color: rgb(26, 20, 109);
+    background-color: white;
     position: absolute;
     display: flex;
     flex-flow: column;
