@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Taco.module.css';
 import TacoIngredient from './TacoIngredients/TacoIngredient';
 import Aux from '../../hoc/Aux';
+import LogoImage from '../../assets/images/tacoPlaceholder.gif';
 
 const taco = props => {
   // [tortilla, pastor, suadero...]
@@ -20,7 +21,7 @@ const taco = props => {
     // when we add more ingredients the obj inner elment will be the elment of array
     console.log(transformedIngredients); // ingredients in a flat array   
     if (transformedIngredients.length ===0) {
-      transformedIngredients = <Aux><br/><br/><p>Tripa vacia corazón sin alegría<br/><br/><br/>Agrega tus ingredientes favoritos </p></Aux>
+      transformedIngredients = <Aux><img style={{height: '80%', marginTop: '40px'}} src={LogoImage} alt="Logo"></img></Aux>
     }
   return (
     <div className={classes.Taco}>
