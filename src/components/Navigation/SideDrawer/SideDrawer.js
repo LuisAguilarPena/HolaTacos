@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../Logo/Logo';
+//import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/Aux';
@@ -16,9 +16,9 @@ const sideDrawer = props => {
       <Backdrop show={props.open} clicked={props.closed}/>
       <div className={attachedClasses.join(' ')}>
         {/*<Logo height="5%" /> works with inline style*/}
-        <div className={classes.Logo}>
+        {/*<div className={classes.Logo}>
         <Logo />
-        </div>
+  </div>*/}
         <nav>
           <NavigationItems />
         </nav>
