@@ -1,4 +1,4 @@
-.Taco {
+/*.Taco {
   width: 600px;
   height: 631px;
   background-color: grey;
@@ -40,9 +40,9 @@
   text-align: center;
   font-weight: bold;*/
   /*font-size: 1.2rem; scales based on the default font*/
-}
 
-@media (max-width: 1280px) {
+
+@media (min-width: 1156px) and (min-height: 648px) {
   .Taco {
     width: 600px;
     height: 615px;
@@ -57,7 +57,33 @@
     right: 12px;
     top: 0px;
   }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 16px 
+  }
 }
+
+@media (min-width: 1600px) and (min-height: 900px) {
+  .Taco {
+    width: 600px;
+    height: 615px;
+    background-color: rgb(26, 20, 109);
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 72px;
+    padding: 10px 0;
+    border: 4px solid black;
+    right: 64px;
+    top: 64px;
+  }
+}
+
 /*media queries to ensure taco looks good on as many devices as possible*/
 /*I can hardcode for specific devices, look for data of the most used and their screen size or use porcentages nad just make sure that ingredients still look good and are place in the right spot*/
 /*@media (min-width: 500px) and (min-height: 400px) {

@@ -25,6 +25,7 @@ const taco = props => {
     }
   return (
     <div className={classes.Taco}>
+      <div className={classes.Tittle}><strong>Admira tu hermoso taco</strong></div>
       {transformedIngredients}
     </div>
   );
