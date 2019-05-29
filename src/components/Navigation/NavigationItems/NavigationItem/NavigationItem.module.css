@@ -17,9 +17,11 @@
 .NavigationItem a:hover,
 .NavigationItem a.hover{
   color: white;
+  background-color: black;
+  border-bottom: 4px solid red;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 651px) {
   .NavigationItem{
     margin: 0;
     display: flex;

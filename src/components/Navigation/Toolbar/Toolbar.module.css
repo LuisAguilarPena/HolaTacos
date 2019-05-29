@@ -20,10 +20,20 @@
 }*/
 
 .Logo{
-  height: 80%;
+  height: 30%;
+}
+@media(min-width: 350px){
+  .Logo{
+    height: 60%;
+  }
+}
+@media(min-width: 600px){
+  .Logo{
+    height: 80%;
+  }
 }
 
-@media (max-width: 499px) {
+@media (max-width: 651px) {
   .DesktopOnly {
     display: none;
   }

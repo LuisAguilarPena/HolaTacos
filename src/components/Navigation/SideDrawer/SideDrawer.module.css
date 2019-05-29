@@ -1,6 +1,6 @@
 .SideDrawer{
   position: fixed;
-  width: 280px;
+  width: 160px;
   max-width: 70%;
   height: 100%;
   left: 0;
@@ -12,7 +12,7 @@
   transition: transform 0.3 ease-out;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 651px) {
   .SideDrawer {
     display: none;
   }
@@ -23,10 +23,10 @@
 }
 
 .Close{
-  transform: translateX(-100%);
+  transform: translateX(-200%);
 }
 
 .Logo{
-  height: 4.5%;
+  height: 2%;
   margin-bottom: 32px; 
 }
