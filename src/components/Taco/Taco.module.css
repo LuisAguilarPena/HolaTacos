@@ -1,51 +1,32 @@
-/*.Taco {
-  width: 600px;
-  height: 631px;
-  background-color: grey;
-  position: absolute;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  margin-top: 96px;
-  padding: 10px 0;
-  border: 4px solid black;
-  right: 0px;
-  top: 0px;
-  /*width: 30%;
-  margin: auto;
-  height: 220px;
-  background-color: wheat;
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 48px;
-  left: 8%;
-  top: 23.5%;*/
-  /* to put it on top
-  width: 100%;
-  margin: auto;
-  height: 220px;
-  background-color: white;
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 48px;
-  */
-  /*
-  width: 100%;
-  margin: auto;
-  height: 250px;
-  text-align: center;
-  font-weight: bold;*/
-  /*font-size: 1.2rem; scales based on the default font*/
-
-
-@media (min-width: 1156px) and (min-height: 648px) {
+@media (min-width: 1024px) {
   .Taco {
-    width: 600px;
-    height: 615px;
+    width: 500px;
+    height: 611px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 16px;
+    padding: 10px 0;
+    border: 4px solid black;
+    right: 12px;
+    top: 0px;
+    transform: scale(0.75);
+  }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 16px 
+  }
+}
+@media (min-width: 1156px) {
+  .Taco {
+    width: 500px;
+    height: 611px;
     background-color: white;
     position: absolute;
     display: flex;
@@ -67,10 +48,10 @@
   }
 }
 
-@media (min-width: 1600px) and (min-height: 900px) {
+@media (min-width: 1280px) {
   .Taco {
     width: 600px;
-    height: 615px;
+    height: 611px;
     background-color: white;
     position: absolute;
     display: flex;
@@ -79,30 +60,92 @@
     margin-top: 72px;
     padding: 10px 0;
     border: 4px solid black;
-    right: 64px;
+    right: 12px;
+    top: 0px;
+  }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 16px 
+  }
+}
+
+@media (min-width: 1366px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 72px;
+    padding: 10px 0;
+    border: 4px solid black;
+    right: 24px;
+    top: 16px;
+  }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 18px 
+  }
+}
+
+@media (min-width: 1600px) {
+  .Taco {
+    width: 650px;
+    height: 611px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 72px;
+    padding: 10px 0;
+    border: 4px solid black;
+    right: 128px;
     top: 64px;
+    transform: scale(1.025);
+  }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 20px 
   }
 }
 
-/*media queries to ensure taco looks good on as many devices as possible*/
-/*I can hardcode for specific devices, look for data of the most used and their screen size or use porcentages nad just make sure that ingredients still look good and are place in the right spot*/
-/*@media (min-width: 500px) and (min-height: 400px) {
+@media (min-width: 1920px) {
   .Taco {
-    width: 350px;
-    height: 300px;
+    width: 750px;
+    height: 611px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: 4px solid black;
+    right: 128px;
+    top: 64px;
+    transform: scale(1.15);
+  }
+
+  .Tittle{
+    background-color: white;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
   }
 }
-
-@media (min-width: 500px) and (min-height: 401px) {
-  .Taco {
-    width: 450px;
-    height: 400px;
-  }
-}
-
-@media (min-width: 1000px) and (min-height: 700px) {
-  .Taco {
-    width: 700px;
-    height: 600px;
-  }
-}*/

@@ -1,6 +1,52 @@
+@media (min-width: 1024px) {
+  .BuildControls {
+    width: 500px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0px 0;
+    border: 4px solid black;
+    position: absolute;
+    left: 12px;
+    top: 0;
+    transform: scale(0.75);
+  }
 
+  .Tittle{
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  padding: 0 10px 0 10px;
+  font-size: 16px 
+  }
+}
+@media (min-width: 1156px) {
+  .BuildControls {
+    width: 500px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 72px;
+    padding: 0px 0;
+    border: 4px solid black;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
 
-@media (min-width: 1156px) and (min-height: 648px) {
+  .Tittle{
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  padding: 0 10px 0 10px;
+  font-size: 16px 
+  }
+}
+
+@media (min-width: 1280px) {
   .BuildControls {
     width: 600px;
     background-color: white;
@@ -23,8 +69,7 @@
   font-size: 16px 
   }
 }
-
-@media (min-width: 1600px) and (min-height: 900px) {
+@media (min-width: 1366px){
   .BuildControls {
     width: 600px;
     background-color: white;
@@ -35,8 +80,8 @@
     padding: 0px 0;
     border: 4px solid black;
     position: absolute;
-    left: 64px;
-    top: 64px;
+    left: 24px;
+    top: 16px;
   }
 
   .Tittle{
@@ -44,9 +89,59 @@
   position: absolute;
   top: -10px;
   padding: 0 10px 0 10px;
-  font-size: 16px;
+  font-size: 18px 
   }
 }
+
+@media (min-width: 1600px) /*and (min-height: 900px) */{
+  .BuildControls {
+    width: 650px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 72px;
+    padding: 0px 0;
+    border: 4px solid black;
+    position: absolute;
+    left: 128px;
+    top: 64px;
+    transform: scale(1.025);
+  }
+
+  .Tittle{
+  background-color: white;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+  }
+}
+@media (min-width: 1920px) /*and (min-height: 900px) */{
+  .BuildControls {
+    width: 750px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: 4px solid black;
+    position: absolute;
+    left: 128px;
+    top: 64px;
+    transform: scale(1.15);
+  }
+
+  .Tittle{
+  background-color: white;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+
 
 .BuildControl {
   display: flex;
