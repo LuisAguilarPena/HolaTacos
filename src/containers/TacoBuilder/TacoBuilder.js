@@ -4,6 +4,7 @@ import Taco from '../../components/Taco/Taco';
 import BuildControls from '../../components/Taco/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Taco/OrderSummary/OrderSummary';
+import axios from '../../axios-orders';
 
 class TacoBuilder extends Component {
   state = {
@@ -91,7 +92,27 @@ class TacoBuilder extends Component {
   }
 
   modalContinueHandler = () => {
-    alert(`“All the things I really like to do are either immoral, illegal or fattening.” -Everybody`);
+    const order = {
+      ingredients: this.state.ingredients,
+      quantity: this.state.quantity,
+      // not a good aproach we should recalculate price on server in order to avoid any client side manipulation
+      price: this.state.quantity*this.state.totalPrice,
+      // dummy order data
+      customer: {
+        name: 'Luis Aguilar',
+        address: {
+          street: 'Zamora 128',
+          zipCode: '06100',
+          colonia: 'Condesa'
+        },
+        email: 'test@test.com'
+      },
+      deliveryMethod: 'fastest'
+    }
+    //.json especifaclly for firebase
+    axios.post('/orders.json', order) 
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
   }
   render () {
     const disabledTQ= this.state.quantity<=0 ? true : false; 
