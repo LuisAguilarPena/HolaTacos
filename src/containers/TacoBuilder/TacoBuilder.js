@@ -35,7 +35,7 @@ class TacoBuilder extends Component {
           this.state.ingredients.pollo
         ]
     if(ingredientQuantity === 0 && (meats.reduce((previousValueAcc, currentValue)=> previousValueAcc+currentValue)<1)) {
-      console.log(`addIngredientHandler added 1 to ${type}`);
+      //console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
         ...this.state.ingredients
@@ -45,7 +45,7 @@ class TacoBuilder extends Component {
     }
     // let other ingredients be added
     if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='cebolla' || type==='queso' || type==='pina')) {
-      console.log(`addIngredientHandler added 1 to ${type}`);
+      //console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
         ...this.state.ingredients
@@ -53,14 +53,14 @@ class TacoBuilder extends Component {
       updatedIngredients[type]=ingredientQuantity+1;
       this.setState({ingredients: updatedIngredients})
     }
-    console.log(this.state.ingredients);
-    console.log(meats);
+    //console.log(this.state.ingredients);
+    //console.log(meats);
   }
 
   removeIngredientHandler = type => {
     let ingredientQuantity = this.state.ingredients[type]
     if(ingredientQuantity === 1) {
-      console.log(`removeIngredientHandler removed 1 to ${type}`);
+      //console.log(`removeIngredientHandler removed 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
         ...this.state.ingredients
@@ -68,7 +68,7 @@ class TacoBuilder extends Component {
       updatedIngredients[type]=ingredientQuantity-1;
       this.setState({ingredients: updatedIngredients})
     }
-    console.log(this.state.ingredients);
+    //console.log(this.state.ingredients);
   }
 
   increaseTacoQuantityHandler = () =>{

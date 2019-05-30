@@ -19,7 +19,7 @@ const taco = props => {
     .reduce((prevValue, currValue) => prevValue.concat(currValue));
     // the [] after the callback seems to not be necessary for reduce, is an initial value to store in an empty array
     // when we add more ingredients the obj inner elment will be the elment of array
-    console.log(transformedIngredients); // ingredients in a flat array   
+    //console.log(transformedIngredients); // ingredients in a flat array   
     if (transformedIngredients.length ===0) {
       transformedIngredients = <Aux><img style={{height: '80%', marginTop: '40px'}} src={LogoImage} alt="Logo"></img></Aux>
     }
