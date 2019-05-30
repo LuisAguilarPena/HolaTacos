@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 import Taco from '../../components/Taco/Taco';
 import BuildControls from '../../components/Taco/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';

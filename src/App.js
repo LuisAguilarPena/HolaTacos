@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from './components/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
 import TacoBuilder from './containers/TacoBuilder/TacoBuilder';
 // Root component of our application, all other components will be nested here
 class App extends Component{

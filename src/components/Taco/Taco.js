@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Taco.module.css';
 import TacoIngredient from './TacoIngredients/TacoIngredient';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 import LogoImage from '../../assets/images/tacoPlaceholder2.gif';
 
 const taco = props => {
