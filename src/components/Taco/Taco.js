@@ -5,7 +5,7 @@ import Aux from '../../hoc/Aux/Aux';
 import LogoImage from '../../assets/images/tacoPlaceholder2.gif';
 
 const taco = props => {
-  // [tortilla, pastor, suadero...]
+  // [1tortilla, 2pastor, 3suadero...]
   let transformedIngredients = Object.keys(props.ingredients)
     .map(igKey => {
       // an array with empty arrays or arrays with undefined for every ingredient

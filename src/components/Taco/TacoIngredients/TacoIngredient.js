@@ -6,31 +6,31 @@ class TacoIngredient extends Component{
   render(){
     let ingredient = null;
     switch (this.props.type) {
-      case ('tortilla'):
+      case ('1tortilla'):
         ingredient = <div className={classes.tortilla}></div>;
         break;
-      case('pastor'):
+      case('2pastor'):
         ingredient = <div className={classes.pastor}></div>;
         break;
-      case('suadero'):
+      case('3suadero'):
         ingredient = <div className={classes.suadero}></div>;
         break;
-      case('bistec'):
+      case('4bistec'):
         ingredient = <div className={classes.bistec}></div>;
         break;
-      case('longaniza'):
+      case('5longaniza'):
         ingredient = <div className={classes.longaniza}></div>;
         break;
-      case('pollo'):
+      case('6pollo'):
         ingredient = <div className={classes.pollo}></div>;
         break;
-      case('cilantro'):
+      case('7cilantro'):
         ingredient = <div className={classes.cilantro}></div>;
         break;
-      case('cebolla'):
+      case('8cebolla'):
         ingredient = <div className={classes.cebolla}></div>;
         break;
-      case('queso'):
+      case('9queso'):
         ingredient = <div className={classes.queso}></div>;
         break;
       case('pina'):

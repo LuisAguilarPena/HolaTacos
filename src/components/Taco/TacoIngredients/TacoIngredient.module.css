@@ -78,22 +78,22 @@
   position: absolute;
 }
 
-.pina{
-  width: 126px;
-  height: 80px;
-  background-image: url("../../../assets/images/pina.png");
-  background-repeat: no-repeat;
-  left: 40%;
-  top: 38%;
-  position: absolute;
-}
-
 .queso{
   width: 180px;
   height: 70px;
   background-image: url("../../../assets/images/queso.png");
   background-repeat: no-repeat;
   left: 35%;
+  top: 38%;
+  position: absolute;
+}
+
+.pina{
+  width: 126px;
+  height: 80px;
+  background-image: url("../../../assets/images/pina.png");
+  background-repeat: no-repeat;
+  left: 40%;
   top: 38%;
   position: absolute;
 }

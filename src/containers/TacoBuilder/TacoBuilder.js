@@ -10,33 +10,31 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 class TacoBuilder extends Component {
   state = {
-    ingredients: {
-      tortilla: 0,
-      pastor: 0,
-      suadero: 0,
-      bistec: 0,
-      longaniza: 0,
-      pollo: 0,
-      cilantro: 0,
-      cebolla: 0,
-      queso: 0,
-      pina: 0
-    },
+    ingredients: null,
     totalPrice: 20,
     quantity: 0,
     modalDisplay: false,
-    loading: false
+    loading: false,
+    error: false
   }
+
+  componentDidMount () {
+    axios.get('https://holatacos-xo.firebaseio.com/ingredients.json')
+      .then(response => {
+        this.setState({ingredients: response.data});
+      })
+      .catch(error => {this.setState({error: true})});   
+  } 
 
   addIngredientHandler = type => {
     let ingredientQuantity = this.state.ingredients[type]
     // limit to one meat
         const meats = [
-          this.state.ingredients.pastor,
-          this.state.ingredients.suadero,
-          this.state.ingredients.bistec,
-          this.state.ingredients.longaniza,
-          this.state.ingredients.pollo
+          this.state.ingredients['2pastor'],
+          this.state.ingredients['3suadero'],
+          this.state.ingredients['4bistec'],
+          this.state.ingredients['5longaniza'],
+          this.state.ingredients['6pollo']
         ]
     if(ingredientQuantity === 0 && (meats.reduce((previousValueAcc, currentValue)=> previousValueAcc+currentValue)<1)) {
       //console.log(`addIngredientHandler added 1 to ${type}`);
@@ -48,7 +46,7 @@ class TacoBuilder extends Component {
       this.setState({ingredients: updatedIngredients})
     }
     // let other ingredients be added
-    if(ingredientQuantity === 0 && (type==='tortilla' || type==='cilantro' || type==='cebolla' || type==='queso' || type==='pina')) {
+    if(ingredientQuantity === 0 && (type==='1tortilla' || type==='7cilantro' || type==='8cebolla' || type==='9queso' || type==='pina')) {
       //console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
@@ -132,7 +130,7 @@ class TacoBuilder extends Component {
     // we wanna disable when the value is 0 (false natively), with the disabledInfo[key] <=0 we make that 0 true so it works
     for(let key in disabledInfo) {
       disabledInfo[key] = disabledInfo[key] <=0; // will update values so instead of numbers we will have true or false
-    } // {tortilla: true, pastor: true...} if ture should be disable
+    } // {1tortilla: true, 2pastor: true...} if ture should be disable
     
     const disabledMore = {
       ...this.state.ingredients
@@ -140,75 +138,85 @@ class TacoBuilder extends Component {
     // we don't need to mimic the previous for in because here we want to keep the values as they are since they evaluate correctly into either tru or false
     // if (any meats are more than one then disable button by changing all of them into true) 
       // we need the actual true not the number because if we get the number we will render aswell
-    if (disabledMore.pastor === 1) {
-      disabledMore.pastor = true;
-      disabledMore.suadero = true;
-      disabledMore.bistec = true;
-      disabledMore.longaniza = true;
-      disabledMore.pollo = true;
+    if (disabledMore['2pastor'] === 1) {
+      disabledMore['2pastor'] = true;
+      disabledMore['3suadero'] = true;
+      disabledMore['4bistec'] = true;
+      disabledMore['5longaniza'] = true;
+      disabledMore['6pollo'] = true;
     }
 
-    if (disabledMore.suadero === 1) {
-      disabledMore.pastor = true;
-      disabledMore.suadero = true;
-      disabledMore.bistec = true;
-      disabledMore.longaniza = true;
-      disabledMore.pollo = true;
+    if (disabledMore['3suadero'] === 1) {
+      disabledMore['2pastor'] = true;
+      disabledMore['3suadero'] = true;
+      disabledMore['4bistec'] = true;
+      disabledMore['5longaniza'] = true;
+      disabledMore['6pollo'] = true;
     }
 
-    if (disabledMore.bistec === 1) {
-      disabledMore.pastor = true;
-      disabledMore.suadero = true;
-      disabledMore.bistec = true;
-      disabledMore.longaniza = true;
-      disabledMore.pollo = true;
+    if (disabledMore['4bistec'] === 1) {
+      disabledMore['2pastor'] = true;
+      disabledMore['3suadero'] = true;
+      disabledMore['4bistec'] = true;
+      disabledMore['5longaniza'] = true;
+      disabledMore['6pollo'] = true;
     }
 
-    if (disabledMore.longaniza === 1) {
-      disabledMore.pastor = true;
-      disabledMore.suadero = true;
-      disabledMore.bistec = true;
-      disabledMore.longaniza = true;
-      disabledMore.pollo = true;
+    if (disabledMore['5longaniza'] === 1) {
+      disabledMore['2pastor'] = true;
+      disabledMore['3suadero'] = true;
+      disabledMore['4bistec'] = true;
+      disabledMore['5longaniza'] = true;
+      disabledMore['6pollo'] = true;
     }
 
-    if (disabledMore.pollo === 1) {
-      disabledMore.pastor = true;
-      disabledMore.suadero = true;
-      disabledMore.bistec = true;
-      disabledMore.longaniza = true;
-      disabledMore.pollo = true;
+    if (disabledMore['6pollo'] === 1) {
+      disabledMore['2pastor'] = true;
+      disabledMore['3suadero'] = true;
+      disabledMore['4bistec'] = true;
+      disabledMore['5longaniza'] = true;
+      disabledMore['6pollo'] = true;
     }
+    let orderSummary = null;
 
-    let orderSummary = 
+    let taco = this.state.error ? <Aux><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>Game Over</p></Aux> : <Spinner />;
+
+    if(this.state.ingredients){
+    taco = ( 
+      <Aux>
+        <Taco ingredients={this.state.ingredients}/>
+          <BuildControls 
+            ingredientAdded={this.addIngredientHandler}
+            ingredientRemoved={this.removeIngredientHandler}
+            disabled={disabledInfo} 
+            disabledMore={disabledMore}
+            quantity={this.state.quantity}
+            quantityPlus={this.increaseTacoQuantityHandler}
+            quantityMinus={this.decreaseTacoQuantityHandler}
+            disabledTQ={disabledTQ}
+            addToOrder={this.state.quantity<=0} 
+            price={this.state.totalPrice} 
+            ordered={this.modalDisplayHandler}/>
+      </Aux>);
+      orderSummary =
       <OrderSummary 
         ingredients={this.state.ingredients} 
         quantity={this.state.quantity} 
         price={this.state.totalPrice} 
         modalContinue={this.modalContinueHandler} 
-        modalCancel={this.modalDisplayHandlerCancel} />
+        modalCancel={this.modalDisplayHandlerCancel} />;
+        
+        if (this.state.loading) {
+          orderSummary = <Spinner />;
+        }
+      }
 
-    if (this.state.loading) {
-      orderSummary = <Spinner />;
-    }
     return (
       <Aux>  
         <Modal show={this.state.modalDisplay} modalClosed={this.modalDisplayHandlerCancel} >
           {orderSummary}
         </Modal>
-        <Taco ingredients={this.state.ingredients}/>
-        <BuildControls 
-          ingredientAdded={this.addIngredientHandler}
-          ingredientRemoved={this.removeIngredientHandler}
-          disabled={disabledInfo} 
-          disabledMore={disabledMore}
-          quantity={this.state.quantity}
-          quantityPlus={this.increaseTacoQuantityHandler}
-          quantityMinus={this.decreaseTacoQuantityHandler}
-          disabledTQ={disabledTQ}
-          addToOrder={this.state.quantity<=0} 
-          price={this.state.totalPrice} 
-          ordered={this.modalDisplayHandler}/>
+        {taco}
       </Aux>
     );
   }

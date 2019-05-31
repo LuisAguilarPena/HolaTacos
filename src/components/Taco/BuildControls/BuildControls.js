@@ -3,16 +3,16 @@ import classes from './BuildControls.module.css';
 import BuildControl from './BuildControl/BuildControl';
 // an array to conveniently build the controls
 const controls = [
-  {label: 'Tortilla', type: 'tortilla'},
-  {label: 'Pastor', type: 'pastor'},
-  {label: 'Suadero', type: 'suadero'},
-  {label: 'Bistec', type: 'bistec'},
-  {label: 'Longaniza', type: 'longaniza'},
-  {label: 'Pollo', type: 'pollo'},
-  {label: 'Cilantro', type: 'cilantro'},
-  {label: 'Cebolla', type: 'cebolla'},
-  {label: 'Queso', type: 'queso'},
-  {label: 'Pina', type: 'pina'}
+  {label: 'Tortilla', type: '1tortilla'},
+  {label: 'Pastor', type: '2pastor'},
+  {label: 'Suadero', type: '3suadero'},
+  {label: 'Bistec', type: '4bistec'},
+  {label: 'Longaniza', type: '5longaniza'},
+  {label: 'pollo', type: '6pollo'},
+  {label: 'Cilantro', type: '7cilantro'},
+  {label: 'Cebolla', type: '8cebolla'},
+  {label: 'Queso', type: '9queso'},
+  {label: 'Piña', type: 'pina'}
 ]
 const buildControls = props => (
   <div className={classes.BuildControls}>
