@@ -12,7 +12,7 @@ const controls = [
   {label: 'Cilantro', type: '7cilantro'},
   {label: 'Cebolla', type: '8cebolla'},
   {label: 'Queso', type: '9queso'},
-  {label: 'Piña', type: 'pina'}
+  {label: 'Piña', type: 'zpina'}
 ]
 const buildControls = props => (
   <div className={classes.BuildControls}>

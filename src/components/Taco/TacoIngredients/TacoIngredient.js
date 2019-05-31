@@ -33,7 +33,7 @@ class TacoIngredient extends Component{
       case('9queso'):
         ingredient = <div className={classes.queso}></div>;
         break;
-      case('pina'):
+      case('zpina'):
         ingredient = <div className={classes.pina}></div>;
         break;
       default:

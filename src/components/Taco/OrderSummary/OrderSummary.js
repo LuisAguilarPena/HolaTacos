@@ -19,7 +19,7 @@ class OrderSummary extends Component {
       return arr;
     }
     const ingredientSummary = chosenIngredients(this.props.ingredients) // here I will have an array of lonly the ingredients that are chosen
-    .map(igKey => <li key={igKey}><span style={{textTransform: 'capitalize'}}>{igKey}</span></li>)
+    .map(igKey => <li key={igKey}><span style={{textTransform: 'capitalize'}}>{igKey.slice(1)}</span></li>)
     return (
       <Aux>
         <h3>Resumen de orden:</h3>

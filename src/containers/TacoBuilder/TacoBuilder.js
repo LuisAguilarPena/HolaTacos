@@ -46,7 +46,7 @@ class TacoBuilder extends Component {
       this.setState({ingredients: updatedIngredients})
     }
     // let other ingredients be added
-    if(ingredientQuantity === 0 && (type==='1tortilla' || type==='7cilantro' || type==='8cebolla' || type==='9queso' || type==='pina')) {
+    if(ingredientQuantity === 0 && (type==='1tortilla' || type==='7cilantro' || type==='8cebolla' || type==='9queso' || type==='zpina')) {
       //console.log(`addIngredientHandler added 1 to ${type}`);
       // state should be updated in an inmutable way
       const updatedIngredients = {
