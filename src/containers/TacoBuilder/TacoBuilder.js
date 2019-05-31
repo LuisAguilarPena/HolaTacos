@@ -6,6 +6,7 @@ import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Taco/OrderSummary/OrderSummary';
 import axios from '../../axios-orders';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 class TacoBuilder extends Component {
   state = {
@@ -213,4 +214,4 @@ class TacoBuilder extends Component {
   }
 }
 
-export default TacoBuilder;
+export default withErrorHandler(TacoBuilder, axios);
