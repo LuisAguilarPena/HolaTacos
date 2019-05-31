@@ -5,11 +5,8 @@ import Aux from '../Aux/Aux';
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return class extends Component {
-    state = {
-      error: null
-    } 
-    
-    componentWillMount () {
+    constructor(){
+      super ()
       axios.interceptors.request.use(req =>{
         this.setState({error: null});
         return req;
@@ -18,8 +15,12 @@ const withErrorHandler = (WrappedComponent, axios) => {
         this.setState({error: error});
       });
     }
-
-    errorConfirmHandler = () => {
+    
+    state = {
+      error: null
+    } 
+    
+      errorConfirmHandler = () => {
       this.setState({error:null})
     }
 
