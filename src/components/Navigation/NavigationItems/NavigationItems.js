@@ -9,9 +9,9 @@ import taco from '../../../assets/images/taco.png';
 
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem link="/" active><img src={taco} alt="avatar"/></NavigationItem>
+    <NavigationItem link="/" ><img src={taco} alt="avatar"/></NavigationItem>
     <NavigationItem link="/" ><img src={avatar} alt="avatar"/></NavigationItem>
-    <NavigationItem link="/" ><img src={checkout} alt="Checkout"/></NavigationItem>
+    <NavigationItem link="/orders" ><img src={checkout} alt="Checkout"/></NavigationItem>
     <NavigationItem link="/" ><img src={help} alt="Ayuda"/></NavigationItem>
     <NavigationItem link="/" ><img src={contact} alt="Contact"/></NavigationItem>
   </ul>
