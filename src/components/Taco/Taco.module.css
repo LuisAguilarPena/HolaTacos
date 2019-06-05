@@ -351,7 +351,7 @@
     font-size: 16px 
   }
 }
-@media (min-width: 1156px) {
+@media (min-width: 1155px) {
   .Taco {
     width: 500px;
     height: 611px;
@@ -377,7 +377,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1279px) {
   .Taco {
     width: 600px;
     height: 611px;
@@ -403,7 +403,7 @@
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1365px) {
   .Taco {
     width: 600px;
     height: 611px;
