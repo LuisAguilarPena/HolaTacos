@@ -17,6 +17,10 @@
   padding: 10px;
 }
 
+.Order:hover{
+  transform: scale(1.05)
+}
+
 @media(max-width: 1156px){
   .Order{
     width: 100%;
@@ -57,5 +61,8 @@
     border: 2px solid black;
     padding: 10px;
     transform: scale(0.8)
+  }
+  .Order:hover{
+    transform: scale(1.025)
   }
 }
