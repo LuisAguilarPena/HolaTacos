@@ -94,36 +94,12 @@ class TacoBuilder extends Component {
   }
 
   modalContinueHandler = () => {
-    /*this.setState({loading: true});
-    const order = {
-      ingredients: this.state.ingredients,
-      quantity: this.state.quantity,
-      // not a good aproach we should recalculate price on server in order to avoid any client side manipulation
-      price: this.state.quantity*this.state.totalPrice,
-      // dummy order data
-      customer: {
-        name: 'Luis Aguilar',
-        address: {
-          street: 'Zamora 128',
-          zipCode: '06100',
-          colonia: 'Condesa'
-        },
-        email: 'test@test.com'
-      },
-      deliveryMethod: 'fastest'
-    }
-    //.json especifaclly for firebase
-    axios.post('/orders.json', order) 
-      .then(response => {
-        this.setState({loading: false, modalDisplay: false});
-      })
-      .catch(error => {
-        this.setState({loading: false, modalDisplay: false});
-      });*/
     const queryParams = [];
     for(let key in this.state.ingredients){
       queryParams.push(encodeURIComponent(key)+'='+encodeURIComponent(this.state.ingredients[key]));
     }
+    queryParams.push('price='+this.state.totalPrice);
+    queryParams.push('quantity='+this.state.quantity);
     const queryString = queryParams.join('&');  
     this.props.history.push({
       pathname:'/checkout',
