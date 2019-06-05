@@ -9,7 +9,31 @@
     margin-bottom: 16px;
     padding: 0px 0;
     position: absolute;
-    left: -85%;
+    left: -75%;
+    top: 620px;
+    transform: scale(0.5)
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 18px 
+  }
+}
+@media (min-width: 250px) {
+  .BuildControls {
+    width: 500px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: -424px;
+    margin-bottom: 16px;
+    padding: 0px 0;
+    position: absolute;
+    left: -50%;
     top: 620px;
     transform: scale(0.5)
   }
@@ -58,6 +82,30 @@
     padding: 0px 0;
     position: absolute;
     left: -20%;
+    top: 620px;
+    transform: scale(0.70)
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 18px 
+  }
+}
+@media (min-width: 375px) {
+  .BuildControls {
+    width: 500px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: -240px;
+    margin-bottom: 16px;
+    padding: 0px 0;
+    position: absolute;
+    left: -19%;
     top: 620px;
     transform: scale(0.70)
   }

@@ -9,7 +9,31 @@
     align-items: center;
     margin-top: -60px;
     padding: 10px 0;
-    right: -80%;
+    right: -75%;
+    top: 0px;
+    transform: scale(0.5)
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 14px 
+  }
+}
+@media (min-width: 250px) {
+  .Taco {
+    width: 500px;
+    height: 510px;
+    background-color: transperent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: -60px;
+    padding: 10px 0;
+    right: -50%;
     top: 0px;
     transform: scale(0.5)
   }
@@ -46,6 +70,30 @@
     font-size: 18px 
   }
 }
+@media (min-width: 320px) {
+  .Taco {
+    width: 500px;
+    height: 510px;
+    background-color: transperent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: -10px;
+    padding: 10px 0;
+    right: -29.5%;
+    top: 0px;
+    transform: scale(0.6)
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 18px 
+  }
+}
 @media (min-width: 350px) {
   .Taco {
     width: 500px;
@@ -58,6 +106,30 @@
     margin-top: 20px;
     padding: 10px 0;
     right: -22%;
+    top: 0px;
+    transform: scale(0.7)
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -10px;
+    padding: 0 10px 0 10px;
+    font-size: 18px 
+  }
+}
+@media (min-width: 375px) {
+  .Taco {
+    width: 500px;
+    height: 510px;
+    background-color: transperent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    right: -20%;
     top: 0px;
     transform: scale(0.7)
   }
