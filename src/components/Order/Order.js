@@ -13,6 +13,7 @@ const order = props => {
   }  
 
   const ingredientOutput = ingredients.map(ig => {
+    if(ig.amount>0){
     return <span 
       style={{
         textTransform: 'capitalize',
@@ -21,8 +22,8 @@ const order = props => {
         border: '4px solid black',
         padding: '10px'
         }}
-      key={ig.name}>{ig.name} ({ig.amount})</span>;
-  })
+      key={ig.name}>{ig.name.slice(1)} ({ig.amount})</span>;
+  }else {return null}})
   return (
     <div className={classes.Order}>
       <p>Ingredients: {ingredientOutput}</p>
