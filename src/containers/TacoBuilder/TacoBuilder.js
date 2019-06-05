@@ -94,7 +94,7 @@ class TacoBuilder extends Component {
   }
 
   modalContinueHandler = () => {
-    this.setState({loading: true});
+    /*this.setState({loading: true});
     const order = {
       ingredients: this.state.ingredients,
       quantity: this.state.quantity,
@@ -119,7 +119,8 @@ class TacoBuilder extends Component {
       })
       .catch(error => {
         this.setState({loading: false, modalDisplay: false});
-      });
+      });*/
+    this.props.history.push('/checkout');  
   }
   render () {
     const disabledTQ= this.state.quantity<=0 ? true : false; 
