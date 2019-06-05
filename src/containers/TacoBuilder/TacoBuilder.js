@@ -120,7 +120,15 @@ class TacoBuilder extends Component {
       .catch(error => {
         this.setState({loading: false, modalDisplay: false});
       });*/
-    this.props.history.push('/checkout');  
+    const queryParams = [];
+    for(let key in this.state.ingredients){
+      queryParams.push(encodeURIComponent(key)+'='+encodeURIComponent(this.state.ingredients[key]));
+    }
+    const queryString = queryParams.join('&');  
+    this.props.history.push({
+      pathname:'/checkout',
+      search: '?' + queryString
+    });
   }
   render () {
     const disabledTQ= this.state.quantity<=0 ? true : false; 
