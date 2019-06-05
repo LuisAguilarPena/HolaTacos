@@ -1,14 +1,61 @@
 .Order{
-  width: 80%;
+  width: 100%;
   border: 4px solid black;
   padding: 10px;
   margin: 20px auto;
   box-sizing: border-box;
-  background: 
-  linear-gradient(135deg, lightgoldenrodyellow 25%, transparent 25%) -50px 0,
-  linear-gradient(225deg, lightgoldenrodyellow 25%, transparent 25%) -50px 0,
-  linear-gradient(315deg, lightgoldenrodyellow 25%, transparent 25%),
-  linear-gradient(45deg, lightgoldenrodyellow 25%, transparent 25%);	
-  background-size: 2em 2em;
-  background-color: rgb(207, 207, 162);
+  background-color: lightgoldenrodyellow;
+  box-shadow: 8px 8px 3px black;
+}
+
+.Span{
+  border: 4px solid black;
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 0 8px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+@media(max-width: 1156px){
+  .Order{
+    width: 100%;
+    border: 4px solid black;
+    padding: 10px;
+    margin: 15px auto;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 8px 8px 3px black;
+    transform: scale(0.9)
+  }
+  .Span{
+    border: 4px solid black;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 8px;
+    border: 2px solid black;
+    padding: 10px;
+    transform: scale(0.9)
+  }
+}
+@media(max-width: 1000px){
+  .Order{
+    width: 100%;
+    border: 4px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 8px 8px 3px black;
+    transform: scale(0.8)
+  }
+  .Span{
+    border: 4px solid black;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 8px;
+    border: 2px solid black;
+    padding: 10px;
+    transform: scale(0.8)
+  }
 }
