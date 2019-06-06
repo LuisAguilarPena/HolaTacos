@@ -28,7 +28,7 @@ class OrderSummary extends Component {
           {ingredientSummary}
         </ul> 
         <p>Han sido agregados a tu carrito.</p>
-        <p>Total a pagar <strong>{this.props.quantity*this.props.price}</strong></p>
+        <p>Total a pagar $<strong>{this.props.quantity*this.props.price}</strong></p>
         <Button btnType="Success" clicked={this.props.modalContinue}>Continuar</Button>
         <Button btnType="Danger" clicked={this.props.modalCancel}>Cancelar</Button>
       </Aux>
