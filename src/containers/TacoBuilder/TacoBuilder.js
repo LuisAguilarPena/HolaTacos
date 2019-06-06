@@ -21,7 +21,7 @@ class TacoBuilder extends Component {
   componentDidMount () {
     axios.get('https://holatacos-xo.firebaseio.com/ingredients.json')
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         this.setState({ingredients: response.data});
       })
       .catch(error => {this.setState({error: true})});   

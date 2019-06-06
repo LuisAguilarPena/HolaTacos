@@ -25,14 +25,26 @@ class Orders extends Component {
       this.setState({loading: false});
     })
   }
+
+  deleteOrderHandler = (index, id) => {
+    axios.delete(`/orders/${id}.json`)
+    .then(res => {
+      let x = [...this.state.orders]
+      x.splice(index, 1);
+      this.setState({orders: x})
+    })    
+  }
+
   render () {
     return (
       <div>
-        {this.state.orders.map(order => (
+        {this.state.orders.map((order, index) => (
+          
           <Order 
-            key={order.id}
+            key={index}
             ingredients={order.ingredients}
-            price={order.price}/>
+            price={order.price}
+            removed={() => this.deleteOrderHandler(index, order.id)}/>
         ))}
       </div>
     );
