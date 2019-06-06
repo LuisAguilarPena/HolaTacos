@@ -20,7 +20,7 @@ class ContactData extends Component {
         elementType: 'input',
         elementConfig: {
           type: 'text',
-          placeholder: 'Calle'
+          placeholder: 'Calle y número'
         },
         value: ''
       }, 
@@ -48,12 +48,23 @@ class ContactData extends Component {
         },
         value: ''
       },
-      deliveryMethod: {
+      tortillaAmount: {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'fastest', displayValue: 'Fastest'},
-            {value: 'cheapest', displayValue: 'Cheapest'},
+            {value: 'doble tortilla', displayValue: 'Doble tortilla'},
+            {value: 'una tortilla', displayValue: 'Una tortilla'}
+          ]
+        },
+        value: ''
+      },
+      salsa: {
+        elementType: 'select',
+        elementConfig: {
+          options: [
+            {value: 'red', displayValue: 'Roja'},
+            {value: 'green', displayValue: 'Verde'},
+            {value: 'red and green', displayValue: 'Roja y verde'}
           ]
         },
         value: ''
@@ -66,11 +77,16 @@ class ContactData extends Component {
     event.preventDefault();
     //console.log(this.props.ingredients);
     this.setState({loading: true});
+    const formData = {};
+    for(let formElementIdentifier in this.state.orderForm) {
+      formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
+    }
     const order = {
       ingredients: this.props.ingredients,
       quantity: this.props.quantity,
       // not a good aproach we should recalculate price on server in order to avoid any client side manipulation
       price: this.props.quantity*this.props.price,
+      orderData:formData
     }
     //.json especifaclly for firebase
     axios.post('/orders.json', order) 
@@ -105,7 +121,7 @@ class ContactData extends Component {
       })
     }
     let form = (
-      <form>
+      <form onSubmit={this.orderHandler}>
         {formElementsArray.map(formElement => (
           <Input 
             key={formElement.id}
