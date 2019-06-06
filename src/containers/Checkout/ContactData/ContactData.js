@@ -7,11 +7,57 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
   state = {
-    name: '',
-    email: '',
-    address: {
-      street: '',
-      postalCode: ''
+    orderForm: {
+      name: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Nombre'
+        },
+        value: ''
+      },
+      street: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Calle'
+        },
+        value: ''
+      }, 
+      zipCode: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Código postal'
+        },
+        value: ''
+      },
+      colonia: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Colonia'
+        },
+        value: ''
+      },
+      email: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'email',
+          placeholder: 'Email'
+        },
+        value: ''
+      },
+      deliveryMethod: {
+        elementType: 'select',
+        elementConfig: {
+          options: [
+            {value: 'fastest', displayValue: 'Fastest'},
+            {value: 'cheapest', displayValue: 'Cheapest'},
+          ]
+        },
+        value: ''
+      }
     },
     loading: false
   }
@@ -25,17 +71,6 @@ class ContactData extends Component {
       quantity: this.props.quantity,
       // not a good aproach we should recalculate price on server in order to avoid any client side manipulation
       price: this.props.quantity*this.props.price,
-      // dummy order data
-      customer: {
-        name: 'Luis Aguilar',
-        address: {
-          street: 'Zamora 128',
-          zipCode: '06100',
-          colonia: 'Condesa'
-        },
-        email: 'test@test.com'
-      },
-      deliveryMethod: 'fastest'
     }
     //.json especifaclly for firebase
     axios.post('/orders.json', order) 
@@ -48,13 +83,37 @@ class ContactData extends Component {
       });
   }
 
+  inputChangeHandler = (event, inputIdentifier) => {
+    const updatedOrderForm = {
+      ...this.state.orderForm
+    }
+    const updatedFormElement = {
+      ...updatedOrderForm[inputIdentifier]    
+    }
+
+    updatedFormElement.value=event.target.value;
+    updatedOrderForm[inputIdentifier] = updatedFormElement;
+    this.setState({orderForm: updatedOrderForm});
+  }
+
   render () {
+    const formElementsArray = [];
+    for(let key in this.state.orderForm) {
+      formElementsArray.push({
+        id: key,
+        config: this.state.orderForm[key]
+      })
+    }
     let form = (
       <form>
-        <Input inputtype="input" type="text" name="name" placeholder="Nombre" />
-        <Input inputtype="input" type="email" name="email" placeholder="E-mail" />
-        <Input inputtype="input" type="text" name="street" placeholder="Calle" />
-        <Input inputtype="input" type="text" name="postal" placeholder="Código postal" />
+        {formElementsArray.map(formElement => (
+          <Input 
+            key={formElement.id}
+            elementType={formElement.config.elementType} 
+            elementConfig={formElement.config.elementConfig}
+            value={formElement.config.value}
+            changed={event => this.inputChangeHandler(event, formElement.id)}/> 
+        ))}
         <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
       </form>);
     if(this.state.loading){
