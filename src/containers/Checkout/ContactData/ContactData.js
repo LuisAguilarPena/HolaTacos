@@ -56,7 +56,7 @@ class ContactData extends Component {
             {value: 'una tortilla', displayValue: 'Una tortilla'}
           ]
         },
-        value: ''
+        value: 'doble tortilla'
       },
       salsa: {
         elementType: 'select',
@@ -67,7 +67,7 @@ class ContactData extends Component {
             {value: 'red and green', displayValue: 'Roja y verde'}
           ]
         },
-        value: ''
+        value: 'red'
       }
     },
     loading: false
