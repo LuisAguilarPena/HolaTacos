@@ -16,59 +16,74 @@ class ContactData extends Component {
         },
         value: ''
       },
-      street: {
+      mesa: {
         elementType: 'input',
         elementConfig: {
           type: 'text',
-          placeholder: 'Calle y número'
+          placeholder: '# de mesa'
+        },
+        value: ''
+      },
+      promoCode: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Código de descuento'
         },
         value: ''
       }, 
-      zipCode: {
-        elementType: 'input',
-        elementConfig: {
-          type: 'text',
-          placeholder: 'Código postal'
-        },
-        value: ''
-      },
-      colonia: {
-        elementType: 'input',
-        elementConfig: {
-          type: 'text',
-          placeholder: 'Colonia'
-        },
-        value: ''
-      },
       email: {
         elementType: 'input',
         elementConfig: {
           type: 'email',
-          placeholder: 'Email'
+          placeholder: 'E-mail'
         },
         value: ''
+      },
+      toGo: {
+        elementType: 'select',
+        elementConfig: {
+          options: [
+            {value: 'para comer', displayValue: 'Para comer'},
+            {value: 'para llevar', displayValue: 'Para llevar'}
+          ]
+        },
+        value: 'Para comer'
       },
       tortillaAmount: {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'doble tortilla', displayValue: 'Doble tortilla'},
-            {value: 'una tortilla', displayValue: 'Una tortilla'}
+            {value: 'double', displayValue: 'Doble tortilla'},
+            {value: 'single', displayValue: 'Una tortilla'}
           ]
         },
-        value: 'doble tortilla'
+        value: 'double'
       },
       salsa: {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'red', displayValue: 'Roja'},
-            {value: 'green', displayValue: 'Verde'},
-            {value: 'red and green', displayValue: 'Roja y verde'}
+            {value: 'red', displayValue: 'Salsa roja'},
+            {value: 'green', displayValue: 'Salsa verde'},
+            {value: 'red and green', displayValue: 'Salsa roja y verde'},
+            {value: 'guacamole', displayValue: 'Guacamole'}
           ]
         },
         value: 'red'
       }
+    },
+    cornTortilla: {
+      elementType: 'select',
+      elementConfig: {
+        options: [
+          {value: '', displayValue: 'Salsa roja'},
+          {value: 'green', displayValue: 'Salsa verde'},
+          {value: 'red and green', displayValue: 'Salsa roja y verde'},
+          {value: 'guacamole', displayValue: 'Guacamole'}
+        ]
+      },
+      value: 'red'
     },
     loading: false
   }

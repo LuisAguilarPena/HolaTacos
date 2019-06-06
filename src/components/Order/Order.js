@@ -19,7 +19,8 @@ const order = props => {
       key={ig.name}>{ig.name.slice(1)} {/*({ig.amount})*/}</span>;
   }else {return null}})
   return (
-    <div className={classes.Order} onClick={props.removed}>
+    <div className={classes.Order}>
+      <button className={classes.Button} onClick={props.removed}>X</button>
       <p><strong>Ingredientes:</strong> {ingredientOutput}</p>
       <p><strong>{props.price/20} Tacos = </strong><strong>${props.price}</strong></p>    
     </div>

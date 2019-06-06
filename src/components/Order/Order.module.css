@@ -4,7 +4,7 @@
   padding: 10px;
   margin: 20px auto;
   box-sizing: border-box;
-  background-color: lightgoldenrodyellow;
+  background-color: white;
   box-shadow: 8px 8px 3px black;
 }
 .Span{
@@ -17,6 +17,21 @@
 }
 .Order:hover{
   transform: scale(1.05);
+}
+.Button{
+  margin: 0% 0% -1% 97%;
+  padding: 6px 10px;
+  border: transparent;
+  background-color: #f05c5c;
+  color: white;
+  box-shadow: inset 5px -5px  #a33d3d;
+  font: inherit;
+}
+.Button:hover{
+  background-color: #e94848;
+  color: white;
+  box-shadow: inset 3px -3px #a33d3d;
+  transform: scale(0.95);
   cursor: pointer;
 }
 @media(max-width: 1156px){
@@ -26,7 +41,7 @@
     padding: 10px;
     margin: 15px auto;
     box-sizing: border-box;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
     box-shadow: 8px 8px 3px black;
     transform: scale(0.9)
   }
@@ -39,6 +54,9 @@
     padding: 10px;
     transform: scale(0.9)
   }
+  .Button{
+    margin: 0% 0% -1% 96%;
+  }
 }
 @media(max-width: 1000px){
   .Order{
@@ -47,7 +65,7 @@
     padding: 10px;
     margin: 20px auto;
     box-sizing: border-box;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
     box-shadow: 8px 8px 3px black;
     transform: scale(0.8)
   }
@@ -62,5 +80,20 @@
   }
   .Order:hover{
     transform: scale(1.025)
+  }
+}
+@media(max-width: 800px){
+  .Button{
+    margin: 0% 0% -1% 95%;
+  }
+}
+@media(max-width: 650px){
+  .Button{
+    margin: 0% 0% -1% 92%;
+  }
+}
+@media(max-width: 500px){
+  .Button{
+    margin: 0% 0% -1% 90%;
   }
 }
