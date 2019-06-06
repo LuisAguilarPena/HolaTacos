@@ -8,7 +8,7 @@ const controls = [
   {label: 'Suadero', type: '3suadero'},
   {label: 'Bistec', type: '4bistec'},
   {label: 'Longaniza', type: '5longaniza'},
-  {label: 'pollo', type: '6pollo'},
+  {label: 'Pollo', type: '6pollo'},
   {label: 'Cilantro', type: '7cilantro'},
   {label: 'Cebolla', type: '8cebolla'},
   {label: 'Queso', type: '9queso'},
