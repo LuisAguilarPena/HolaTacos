@@ -40,6 +40,18 @@ class ContactData extends Component {
         },
         value: ''
       },
+      beverage: {
+        elementType: 'select',
+        elementConfig: {
+          options: [
+            {value: 'Cerveza', displayValue: 'Cerveza'},
+            {value: 'Refresco', displayValue: 'Refresco'},
+            {value: 'Jarra de agua de jamaica', displayValue: 'Jarra de agua de jamaica'},
+            {value: 'Agua enbotellada', displayValue: 'Agua embotellada'}
+          ]
+        },
+        value: 'Cerveza'
+      },
       toGo: {
         elementType: 'select',
         elementConfig: {
