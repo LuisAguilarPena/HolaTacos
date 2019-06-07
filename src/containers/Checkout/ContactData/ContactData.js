@@ -8,7 +8,7 @@ import Input from '../../../components/UI/Input/Input';
 class ContactData extends Component {
   state = {
     orderForm: {
-      name: {
+      nombre: {
         elementType: 'input',
         elementConfig: {
           type: 'text',
@@ -24,7 +24,7 @@ class ContactData extends Component {
         },
         value: ''
       },
-      promoCode: {
+      promo: {
         elementType: 'input',
         elementConfig: {
           type: 'text',
@@ -32,15 +32,7 @@ class ContactData extends Component {
         },
         value: ''
       }, 
-      email: {
-        elementType: 'input',
-        elementConfig: {
-          type: 'email',
-          placeholder: 'E-mail'
-        },
-        value: ''
-      },
-      beverage: {
+      bebida: {
         elementType: 'select',
         elementConfig: {
           options: [
@@ -52,7 +44,7 @@ class ContactData extends Component {
         },
         value: 'Cerveza'
       },
-      toGo: {
+      'to Go': {
         elementType: 'select',
         elementConfig: {
           options: [
@@ -62,7 +54,7 @@ class ContactData extends Component {
         },
         value: 'Para comer'
       },
-      tortillaAmount: {
+      'con copia': {
         elementType: 'select',
         elementConfig: {
           options: [
@@ -76,26 +68,25 @@ class ContactData extends Component {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'red', displayValue: 'Salsa roja'},
-            {value: 'green', displayValue: 'Salsa verde'},
-            {value: 'red and green', displayValue: 'Salsa roja y verde'},
+            {value: 'roja', displayValue: 'Salsa roja'},
+            {value: 'verde', displayValue: 'Salsa verde'},
+            {value: 'roja y verde', displayValue: 'Salsa roja y verde'},
             {value: 'guacamole', displayValue: 'Guacamole'}
           ]
         },
-        value: 'red'
-      }
-    },
-    cornTortilla: {
-      elementType: 'select',
-      elementConfig: {
-        options: [
-          {value: '', displayValue: 'Salsa roja'},
-          {value: 'green', displayValue: 'Salsa verde'},
-          {value: 'red and green', displayValue: 'Salsa roja y verde'},
-          {value: 'guacamole', displayValue: 'Guacamole'}
-        ]
+        value: 'roja'
       },
-      value: 'red'
+      tortilla: {
+        elementType: 'select',
+        elementConfig: {
+          options: [
+            {value: 'maíz', displayValue: 'Tortilla de maíz'},
+            {value: 'harina', displayValue: 'Tortilla de Harina'},
+            {value: 'azul', displayValue: 'Tortilla azul'}
+          ]
+        },
+        value: 'maíz'
+      }
     },
     loading: false
   }
