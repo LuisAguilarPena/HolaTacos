@@ -129,6 +129,15 @@ class ContactData extends Component {
         this.setState({loading: false});
         console.log('x')
       });
+    axios.post('/pastorders.json', order) 
+      .then(response => {
+        this.setState({loading: false});
+        this.props.history.push('/');
+      })
+      .catch(error => {
+        this.setState({loading: false});
+        console.log('x')
+      });
   }
 
   inputChangeHandler = (event, inputIdentifier) => {
