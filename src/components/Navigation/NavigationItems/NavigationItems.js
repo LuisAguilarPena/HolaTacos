@@ -12,8 +12,8 @@ const navigationItems = () => (
     <NavigationItem link="/" ><img src={taco} alt="build"/></NavigationItem>
     <NavigationItem link="/orders" ><img src={avatar} alt="current orders"/></NavigationItem>
     <NavigationItem link="/pastorders" ><img src={checkout} alt="past orders"/></NavigationItem>
-    <NavigationItem link="/" ><img src={help} alt="ayuda"/></NavigationItem>
-    <NavigationItem link="/" ><img src={contact} alt="contacto"/></NavigationItem>
+    <NavigationItem link="/faq" ><img src={help} alt="ayuda"/></NavigationItem>
+    <NavigationItem link="/contact" ><img src={contact} alt="contacto"/></NavigationItem>
   </ul>
 )
 
