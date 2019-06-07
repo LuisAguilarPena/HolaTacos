@@ -6,6 +6,12 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
+  timeF = () => {
+    let timex = new Date (Number(new Date()));
+    let time = timex.toLocaleString();
+    return time;
+  }
+
   state = {
     orderForm: {
       nombre: {
@@ -32,6 +38,13 @@ class ContactData extends Component {
         },
         value: ''
       }, 
+      fecha: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+        },
+        value: this.timeF()
+      }, 
       bebida: {
         elementType: 'select',
         elementConfig: {
@@ -44,7 +57,7 @@ class ContactData extends Component {
         },
         value: 'Cerveza'
       },
-      'to Go': {
+      'to go': {
         elementType: 'select',
         elementConfig: {
           options: [
@@ -54,15 +67,15 @@ class ContactData extends Component {
         },
         value: 'Para comer'
       },
-      'con copia': {
+      tortilla: {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'double', displayValue: 'Doble tortilla'},
-            {value: 'single', displayValue: 'Una tortilla'}
+            {value: 'doble', displayValue: 'Doble tortilla'},
+            {value: 'una', displayValue: 'Una tortilla'}
           ]
         },
-        value: 'double'
+        value: 'doble'
       },
       salsa: {
         elementType: 'select',
@@ -76,7 +89,7 @@ class ContactData extends Component {
         },
         value: 'roja'
       },
-      tortilla: {
+      tipo: {
         elementType: 'select',
         elementConfig: {
           options: [
@@ -114,6 +127,7 @@ class ContactData extends Component {
       })
       .catch(error => {
         this.setState({loading: false});
+        console.log('x')
       });
   }
 
