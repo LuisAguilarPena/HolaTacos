@@ -93,8 +93,7 @@ class ContactData extends Component {
         elementType: 'select',
         elementConfig: {
           options: [
-            {value: 'maíz', displayValue: 'Tortilla de maíz'},
-            {value: 'harina', displayValue: 'Tortilla de Harina'},
+            {value: 'normal', displayValue: 'Tortilla de maíz'},
             {value: 'azul', displayValue: 'Tortilla azul'}
           ]
         },
