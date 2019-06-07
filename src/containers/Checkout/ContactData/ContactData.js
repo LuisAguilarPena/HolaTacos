@@ -52,7 +52,8 @@ class ContactData extends Component {
             {value: 'Cerveza', displayValue: 'Cerveza'},
             {value: 'Refresco', displayValue: 'Refresco'},
             {value: 'Jarra de agua de jamaica', displayValue: 'Jarra de agua de jamaica'},
-            {value: 'Agua enbotellada', displayValue: 'Agua embotellada'}
+            {value: 'Agua enbotellada', displayValue: 'Agua embotellada'},
+            {value: 'Nada', displayValue: 'Nada'}
           ]
         },
         value: 'Cerveza'
