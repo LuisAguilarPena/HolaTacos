@@ -3,13 +3,185 @@
   padding: 0;
   list-style: none;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   align-items: center;
   height: 100%;
 }
 
-@media (min-width: 651px) {
+.TacoTip {
+  visibility:hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 25%;
+  right: 19rem;
+}
+
+.Taco:hover .TacoTip {
+  visibility: visible;
+}
+
+.OrdenesTip {
+  visibility:hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 25%;
+  right: 19rem;
+}
+
+.Ordenes:hover .OrdenesTip {
+  visibility: visible;
+}
+.HistorialTip {
+  visibility:hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 25%;
+  right: 19rem;
+}
+
+.Historial:hover .HistorialTip {
+  visibility: visible;
+}
+.PreguntasTip {
+  visibility:hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 25%;
+  right: 19rem;
+}
+
+.Preguntas:hover .PreguntasTip {
+  visibility: visible;
+}
+.ContactoTip {
+  visibility:hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 25%;
+  right: 19rem;
+}
+
+.Contacto:hover .ContactoTip {
+  visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .TacoTip{
+    transform: scale(0.5);
+    right: 16.5rem;
+  }
+  .OrdenesTip{
+    transform: scale(0.5);
+    right: 16.5rem;
+  }
+  .HistorialTip{
+    transform: scale(0.5);
+    right: 16.5rem;
+  }
+  .PreguntasTip{
+    transform: scale(0.5);
+    right: 16.5rem;
+  }
+  .ContactoTip{
+    transform: scale(0.5);
+    right: 16.5rem;
+  }
+}
+@media (max-width: 750px) {
+  .Taco:hover .TacoTip{
+    visibility: hidden;
+  }
+  .Ordenes:hover .OrdenesTip{
+    visibility: hidden;
+  }
+  .Historial:hover .HistorialTip{
+    visibility: hidden;
+  }
+  .Preguntas:hover .PreguntasTip{
+    visibility: hidden;
+  }
+  .Contacto:hover .ContactoTip{
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 651px) {
   .NavigationItems{
-    flex-flow: row;
+    flex-flow: column;
+  }
+  .TacoTip{
+    visibility: hidden;
+    top: 1rem;
+    right: -8rem;
+    transform: scale(0.75);
+    background-color: #f05c5c;
+  }
+  .Taco:hover .TacoTip{
+    visibility: visible;
+  }
+  .OrdenesTip{
+    visibility: hidden;
+    top: 4.25rem;
+    right: -8rem;
+    transform: scale(0.75);
+    background-color: #f05c5c;
+  }
+  .Ordenes:hover .OrdenesTip{
+    visibility: visible;
+  }
+  .HistorialTip{
+    visibility: hidden;
+    top: 7.25rem;
+    right: -8rem;
+    transform: scale(0.75);
+    background-color: #f05c5c;
+  }
+  .Historial:hover .HistorialTip{
+    visibility: visible;
+  }
+  .PreguntasTip{
+    visibility: hidden;
+    top: 10.5rem;
+    right: -8rem;
+    transform: scale(0.75);
+    background-color: #f05c5c;
+  }
+  .Preguntas:hover .PreguntasTip{
+    visibility: visible;
+  }
+  .ContactoTip{
+    visibility: hidden;
+    top: 13.75rem;
+    right: -8rem;
+    transform: scale(0.75);
+    background-color: #f05c5c;
+  }
+  .Contacto:hover .ContactoTip{
+    visibility: visible;
   }
 }
