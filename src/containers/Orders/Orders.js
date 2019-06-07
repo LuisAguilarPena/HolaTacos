@@ -6,12 +6,14 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 class Orders extends Component {
   state = {
     orders: [],
+    orderData: [],
     loading: true
   }
   
   componentDidMount() {
     axios.get('/orders.json')
     .then(res => {
+      console.log(res.data);
       let fetchedOrders = [];
       //the key are the ids createed by firebase
       for(let key in res.data){
@@ -19,13 +21,15 @@ class Orders extends Component {
           id:key
         });
       }
+      //the key are the ids createed by firebase
       this.setState({loading: false, orders: fetchedOrders});
+      console.log(fetchedOrders);
     })
     .catch(err => {
       this.setState({loading: false});
     })
   }
-
+  
   deleteOrderHandler = (index, id) => {
     axios.delete(`/orders/${id}.json`)
     .then(res => {
@@ -43,6 +47,7 @@ class Orders extends Component {
           <Order 
             key={index}
             ingredients={order.ingredients}
+            extras={order.orderData}
             price={order.price}
             removed={() => this.deleteOrderHandler(index, order.id)}/>
         ))}
