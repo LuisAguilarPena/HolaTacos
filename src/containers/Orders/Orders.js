@@ -31,7 +31,12 @@ class Orders extends Component {
     })
   }
   
+  
   deleteOrderHandler = (index, id) => {
+    axios.post('/pastorders.json', this.state.orders[index] ) 
+    .then(response => {
+      this.props.history.push('/');
+    })
     axios.delete(`/orders/${id}.json`)
     .then(res => {
       let x = [...this.state.orders]
@@ -39,7 +44,7 @@ class Orders extends Component {
       this.setState({orders: x})
     })    
   }
-
+  
   render () {
     let order = null;
     order = 
