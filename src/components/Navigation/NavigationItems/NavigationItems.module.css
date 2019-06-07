@@ -11,7 +11,7 @@
 .TacoTip {
   visibility:hidden;
   width: 160px;
-  background-color: black;
+  background-color: red;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -28,7 +28,7 @@
 .OrdenesTip {
   visibility:hidden;
   width: 160px;
-  background-color: black;
+  background-color: red;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -44,7 +44,7 @@
 .HistorialTip {
   visibility:hidden;
   width: 160px;
-  background-color: black;
+  background-color: red;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -60,7 +60,7 @@
 .PreguntasTip {
   visibility:hidden;
   width: 160px;
-  background-color: black;
+  background-color: red;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -76,7 +76,7 @@
 .ContactoTip {
   visibility:hidden;
   width: 160px;
-  background-color: black;
+  background-color: red;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -92,23 +92,23 @@
 
 @media (max-width: 800px) {
   .TacoTip{
-    transform: scale(0.5);
+    transform: scale(0.6);
     right: 16.5rem;
   }
   .OrdenesTip{
-    transform: scale(0.5);
+    transform: scale(0.6);
     right: 16.5rem;
   }
   .HistorialTip{
-    transform: scale(0.5);
+    transform: scale(0.6);
     right: 16.5rem;
   }
   .PreguntasTip{
-    transform: scale(0.5);
+    transform: scale(0.6);
     right: 16.5rem;
   }
   .ContactoTip{
-    transform: scale(0.5);
+    transform: scale(0.6);
     right: 16.5rem;
   }
 }
@@ -139,7 +139,7 @@
     top: 1rem;
     right: -8rem;
     transform: scale(0.75);
-    background-color: #f05c5c;
+    background-color: red;
   }
   .Taco:hover .TacoTip{
     visibility: visible;
@@ -149,7 +149,7 @@
     top: 4.25rem;
     right: -8rem;
     transform: scale(0.75);
-    background-color: #f05c5c;
+    background-color: red;
   }
   .Ordenes:hover .OrdenesTip{
     visibility: visible;
@@ -159,7 +159,7 @@
     top: 7.25rem;
     right: -8rem;
     transform: scale(0.75);
-    background-color: #f05c5c;
+    background-color: red;
   }
   .Historial:hover .HistorialTip{
     visibility: visible;
@@ -169,7 +169,7 @@
     top: 10.5rem;
     right: -8rem;
     transform: scale(0.75);
-    background-color: #f05c5c;
+    background-color: red;
   }
   .Preguntas:hover .PreguntasTip{
     visibility: visible;
@@ -179,7 +179,7 @@
     top: 13.75rem;
     right: -8rem;
     transform: scale(0.75);
-    background-color: #f05c5c;
+    background-color: red;
   }
   .Contacto:hover .ContactoTip{
     visibility: visible;
