@@ -177,7 +177,7 @@ class ContactData extends Component {
     }
     return(
       <div className={classes.ContactData}>
-        <h4>Ingresa tu información de contacto</h4>
+        <h4>Información extra</h4>
         {form}
       </div>
     );
