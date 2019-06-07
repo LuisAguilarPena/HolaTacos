@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from '../../axios-orders';
 import Order from '../../components/Order/Order';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 class Orders extends Component {
@@ -40,17 +41,22 @@ class Orders extends Component {
   }
 
   render () {
+    let order = null;
+    order = <div>{this.state.orders.map((order, index) => (
+          
+      <Order 
+        key={index}
+        ingredients={order.ingredients}
+        extras={order.orderData}
+        price={order.price}
+        removed={() => this.deleteOrderHandler(index, order.id)}/>
+    ))}</div>
+
+    if(this.state.loading){order = <Spinner/>}
+
     return (
       <div>
-        {this.state.orders.map((order, index) => (
-          
-          <Order 
-            key={index}
-            ingredients={order.ingredients}
-            extras={order.orderData}
-            price={order.price}
-            removed={() => this.deleteOrderHandler(index, order.id)}/>
-        ))}
+        {order}
       </div>
     );
   }  
