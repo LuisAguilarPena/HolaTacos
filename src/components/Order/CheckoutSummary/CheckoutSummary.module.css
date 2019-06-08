@@ -1,4 +1,4 @@
-@media (min-width: 200px) {
+/*@media (min-width: 200px) {
   .CheckoutSummary {
     width: 500px;
     background-color: transperent;
@@ -445,7 +445,7 @@
   }
 }
 
-@media (min-width: 1600px) /*and (min-height: 900px) */{
+@media (min-width: 1600px) {
   .CheckoutSummary {
     width: 650px;
     background-color: transparent;
@@ -466,7 +466,7 @@
   }
 }
 
-@media (min-width: 1750px) /*and (min-height: 900px) */{
+@media (min-width: 1750px) {
   .CheckoutSummary {
     width: 650px;
     background-color: transperent;
@@ -486,7 +486,7 @@
     font: bold;
   }
 }
-@media (min-width: 1920px) /*and (min-height: 900px) */{
+@media (min-width: 1920px) {
   .CheckoutSummary {
     width: 750px;
     background-color: transperent;
@@ -500,6 +500,87 @@
     left: 128px;
     top: -16px;
     transform: scale(1.15);
+  }
+  .Tittle{
+    font-size: 24px;
+    font: bold;
+  }
+}*/
+
+@media (max-width: 2600px) {
+  .CheckoutSummary {
+    width: 750px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: 8rem;
+    top: 1rem;
+    transform: scale(1.15);
+  }
+  .Tittle{
+    font-size: 24px;
+    font: bold;
+  }
+}
+@media (max-width: 1700px) {
+  .CheckoutSummary {
+    width: 750px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: 2rem;
+    top: 1.25rem;
+    transform: scale(1.05);
+  }
+  .Tittle{
+    font-size: 24px;
+    font: bold;
+  }
+}
+@media (max-width: 1400px) {
+  .CheckoutSummary {
+    width: 750px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: 0rem;
+    top: -0.45rem;
+    transform: scale(0.85);
+  }
+  .Tittle{
+    font-size: 24px;
+    font: bold;
+  }
+}
+@media (max-width: 1200px) {
+  .CheckoutSummary {
+    width: 750px;
+    background-color: transperent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -5rem;
+    top: -0.65rem;
+    transform: scale(0.7);
   }
   .Tittle{
     font-size: 24px;

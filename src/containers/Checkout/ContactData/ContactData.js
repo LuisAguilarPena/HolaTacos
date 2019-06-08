@@ -38,6 +38,14 @@ class ContactData extends Component {
         },
         value: ''
       }, 
+      comentario: {
+        elementType: 'input',
+        elementConfig: {
+          type: 'text',
+          placeholder: 'Comentario'
+        },
+        value: ''
+      }, 
       fecha: {
         elementType: 'input',
         elementConfig: {
