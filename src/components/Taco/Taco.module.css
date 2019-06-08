@@ -753,3 +753,153 @@
     font-size: 24px 
   }
 }
+@media (max-width: 550px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -1rem;
+    top: -5rem;
+    transform: scale(0.7);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}
+@media (max-width: 500px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -2.5rem;
+    top: -5rem;
+    transform: scale(0.7);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}
+@media (max-width: 480px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -3.25rem;
+    top: -5rem;
+    transform: scale(0.65);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}
+@media (max-width: 414px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -5rem;
+    top: -5rem;
+    transform: scale(0.6);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}
+@media (max-width: 375px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -6.3rem;
+    top: -6rem;
+    transform: scale(0.55);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}
+@media (max-width: 320px) {
+  .Taco {
+    width: 600px;
+    height: 611px;
+    background-color:transparent;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 10px 0;
+    border: none;
+    left: -7.3rem;
+    top: -7.5rem;
+    transform: scale(0.5);
+  }
+
+  .Tittle{
+    background-color: transperent;
+    position: absolute;
+    top: -14px;
+    padding: 0 10px 0 10px;
+    font-size: 24px 
+  }
+}

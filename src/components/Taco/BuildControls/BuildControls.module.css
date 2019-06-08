@@ -739,6 +739,150 @@
   font-size: 24px;
   }
 }
+@media (max-width: 550px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: 0.5rem;
+    top: 22em;
+    transform: scale(0.8);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -1rem;
+    top: 22em;
+    transform: scale(0.8);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -1.5rem;
+    top: 22em;
+    transform: scale(0.8);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+@media (max-width: 414px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -3.25rem;
+    top: 18em;
+    transform: scale(0.65);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -4.5rem;
+    top: 15em;
+    transform: scale(0.6);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .BuildControls {
+    width: 530px;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0px 0;
+    border: none;
+    position: absolute;
+    left: -5.5rem;
+    top: 11em;
+    transform: scale(0.55);
+  }
+
+  .Tittle{
+  background-color: transperent;
+  position: absolute;
+  top: -14px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+  }
+}
 
 
 
