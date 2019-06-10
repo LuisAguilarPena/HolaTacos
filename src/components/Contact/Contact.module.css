@@ -1,3 +1,8 @@
 .ContactData {
   text-align: center;
 }
+@media(max-width: 700px){
+  .ContactData{
+    font-size: 8px;
+  }
+}
