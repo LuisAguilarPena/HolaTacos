@@ -739,12 +739,12 @@
     padding: 0px 0;
     border: none;
     position: absolute;
-    left: -8.45rem;
-    top: 17.5rem;
+    left: -10.45rem;
+    top: 19.5rem;
     transform: scale(0.55);
   }
   .Tittle{
-    font-size: 24px;
+    font-size: 18px;
     font: bold;
   }
 }
@@ -764,7 +764,7 @@
     transform: scale(0.4125);
   }
   .Tittle{
-    font-size: 24px;
+    font-size: 18px;
     font: bold;
   }
 }
